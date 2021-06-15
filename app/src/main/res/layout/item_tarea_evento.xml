@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layoutFilaTareaEvento"
+    android:layout_marginBottom="5dp"
+    >
+
+
+    <CheckBox
+        android:id="@+id/cbTareaEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/icono"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.15"-->
+    <!--        app:srcCompat="@drawable/ic_baseline_blur_circular_24" />-->
+
+    <TextView
+        android:id="@+id/tvTituloTareaEvento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintVertical_bias="0.4"
+        android:fontFamily="@font/milmedium"
+        android:text="Titulo"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cbTareaEvento"
+        app:layout_constraintEnd_toStartOf="@+id/tvFechaTareaEvento"
+        app:layout_constraintStart_toEndOf="@+id/cbTareaEvento"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescrpiconTareaEvento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/millight"
+        android:text="Descripcion"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTituloTareaEvento"
+        app:layout_constraintStart_toEndOf="@+id/cbTareaEvento"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloTareaEvento" />
+
+    <TextView
+        android:id="@+id/tvFechaTareaEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/milmedium"
+        android:text="12/2/21"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTituloTareaEvento"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHoraTareaEvento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/millight"
+        android:gravity="center_horizontal"
+        android:text="22.30"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDescrpiconTareaEvento"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaTareaEvento" />
+
+<!--    <View-->
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@android:color/darker_gray"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvDescrpiconTareaEvento" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

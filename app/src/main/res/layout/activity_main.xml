@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:animateLayoutChanges="true">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/boton1"
+            android:fontFamily="@font/milmedium"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/boton2"
+            android:fontFamily="@font/milmedium"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="11.99sp"
+            app:layout_constraintEnd_toStartOf="@+id/button3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="110dp"
+            android:layout_height="60dp"
+            android:text="@string/boton3"
+            android:fontFamily="@font/milmedium"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--        <Button-->
+<!--            android:id="@+id/button4"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginHorizontal="10dp"-->
+<!--            android:layout_marginTop="9dp"-->
+<!--            android:text="@string/boton4"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/button2"-->
+<!--            android:visibility="invisible"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/button5"-->
+<!--            android:layout_width="180dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:text="@string/boton5"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/myNavHostFragment"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/button4"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/button2"-->
+<!--            android:visibility="invisible"/>-->
+
+        <TextView
+            android:id="@+id/tvFechaMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:text="HOY ES 25 DE MAYO PA"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+        <fragment
+            android:id="@+id/myNavHostFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFechaMain"
+            app:navGraph="@navigation/navigation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

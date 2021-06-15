@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/fragmentAgregarTarea"
+        android:name="com.citesoftware.test4.fragments.agregar.FragmentAgregarTarea"
+        tools:layout="@layout/fragment_agregar_tarea_libre">
+        <action
+            android:id="@+id/action_fragmentAgregarTarea_to_fragmentTareaLibre"
+            app:destination="@id/fragmentTareaLibre" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentTareaLibre"
+        android:name="com.citesoftware.test4.fragments.lista.TareaLibre.FragmentTareaLibre"
+        android:label="Agenda"
+        app:enterAnim="@animator/nav_default_enter_anim"
+        app:exitAnim="@animator/nav_default_exit_anim"
+        tools:layout="@layout/fragment_tarea_libre">
+        <action
+            android:id="@+id/action_fragmentTareaLibre_to_fragmentAgregarTarea"
+            app:destination="@id/fragmentAgregarTarea" />
+        <action
+            android:id="@+id/action_fragmentTareaLibre_to_fragmentActualizarTareaLibre"
+            app:destination="@id/fragmentActualizarTareaLibre" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentActualizarTareaLibre"
+        android:name="com.citesoftware.test4.fragments.actualizar.FragmentActualizarTareaLibre"
+
+        tools:layout="@layout/fragment_actualizar_tarea_libre">
+        <action
+            android:id="@+id/action_fragmentActualizarTareaLibre_to_fragmentTareaLibre"
+            app:destination="@id/fragmentTareaLibre"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim" />
+        <argument
+            android:name="tareaLibreActual"
+            app:argType="com.citesoftware.test4.database.model.TareaLibre" />
+        <action
+            android:id="@+id/action_fragmentActualizarTareaLibre_to_fragmentTareaAObjetivo"
+            app:destination="@id/fragmentTareaAObjetivo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTareaEvento"
+        android:name="com.citesoftware.test4.fragments.lista.TareaEvento.FragmentTareaEvento"
+
+        app:enterAnim="@animator/nav_default_enter_anim"
+        app:exitAnim="@animator/nav_default_exit_anim">
+        <action
+            android:id="@+id/action_fragmentTareaEvento_to_fragmentAgregarTareaEvento"
+            app:destination="@id/fragmentAgregarTareaEvento" />
+        <action
+            android:id="@+id/action_fragmentTareaEvento_to_fragmentActualizarTareaEvento"
+            app:destination="@id/fragmentActualizarTareaEvento" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentTareaLimite"
+        android:name="com.citesoftware.test4.fragments.lista.TareaLimite.FragmentTareaLimite"
+
+        app:enterAnim="@animator/nav_default_enter_anim"
+        app:exitAnim="@animator/nav_default_exit_anim">
+        <action
+            android:id="@+id/action_fragmentTareaLimite_to_fragmentAgregarTareaLimite"
+            app:destination="@id/fragmentAgregarTareaLimite" />
+        <action
+            android:id="@+id/action_fragmentTareaLimite_to_fragmentActualizarTareaLimite"
+            app:destination="@id/fragmentActualizarTareaLimite" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAgregarTareaEvento"
+        android:name="com.citesoftware.test4.fragments.agregar.FragmentAgregarTareaEvento"
+>
+        <action
+            android:id="@+id/action_fragmentAgregarTareaEvento_to_fragmentTareaEvento"
+            app:destination="@id/fragmentTareaEvento" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAgregarTareaLimite"
+        android:name="com.citesoftware.test4.fragments.agregar.FragmentAgregarTareaLimite"
+ >
+        <action
+            android:id="@+id/action_fragmentAgregarTareaLimite_to_fragmentTareaLimite"
+            app:destination="@id/fragmentTareaLimite" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentActualizarTareaEvento"
+        android:name="com.citesoftware.test4.fragments.actualizar.FragmentActualizarTareaEvento"
+ >
+        <action
+            android:id="@+id/action_fragmentActualizarTareaEvento_to_fragmentTareaEvento"
+            app:destination="@id/fragmentTareaEvento" />
+        <argument
+            android:name="tareaActualEvento"
+            app:argType="com.citesoftware.test4.database.model.TareaEvento" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentActualizarTareaLimite"
+        android:name="com.citesoftware.test4.fragments.actualizar.FragmentActualizarTareaLimite">
+        <action
+            android:id="@+id/action_fragmentActualizarTareaLimite_to_fragmentTareaLimite"
+            app:destination="@id/fragmentTareaLimite"
+            app:popUpTo="@id/fragmentTareaLimite"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="tareaActualLimite"
+            app:argType="com.citesoftware.test4.database.model.TareaLimite" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.citesoftware.test4.main.home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/fragmentTareaAObjetivo"
+        android:name="com.citesoftware.test4.fragments.tareaToObjetivo.FragmentTareaAObjetivo"
+        android:label="FragmentTareaAObjetivo" >
+        <argument
+            android:name="tareaLibreVieja"
+            app:argType="com.citesoftware.test4.database.model.TareaLibre" />
+        <action
+            android:id="@+id/action_fragmentTareaAObjetivo_to_fragmentTareaLibre"
+            app:destination="@id/fragmentTareaLibre" />
+    </fragment>
+</navigation>

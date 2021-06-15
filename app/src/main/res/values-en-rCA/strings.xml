@@ -1,0 +1,141 @@
+<resources>
+    //INFO
+    <string name="tituloInfo">How to use ADHDaily</string>
+    <string name="pregunta1"><u>What\'s the difference between the three lists?</u></string>
+    <string name="Respuesta1">The app includes three different lists:\n\n<b><u>TASKS</u></b>: This is where you can include any pending to do that has no specific date or time. We recommend writing down any task that could be done at different times in the future, but that must not forget. \n\nEvery <b>TASK</b> can be marked as <i>PRIORITY</i> to push said task to the top of the list. They can also be converted into <b>GOALS</b> by clicking the task and pressing the <i>CONVERT</i> button\n\n<b><u>GOALS</u></b>: We suggest that you use this list to add every to do you need to get done before a specific date, or to keep track of the steps of a project.\n\n<b><u>EVENTS</u></b>: Events are activities with a set date and time. We advice you to use this for activities or occurrences outside of your routine.</string>
+    <string name="pregunta2"><u>What do the colors on the dates mean?</u></string>
+    <string name="respuesta2"><b>GOALS</b>, as well as <b>EVENTS</b>, include dates on screen. These can be shown in different colors to convey certain information.\n\n<b><font fgcolor="#E70000">RED</font></b>: Dates while be displayed in red when they have expired, meaning the date set has passed. You can reassign it by clicking the item and selecting a new date.\n\n<b><font fgcolor="#E7B600">YELLOW</font></b>: This color will display when the date set matches the current date, implying that the selected day has come.\n\n<b><font fgcolor="#28a745">GREEN</font></b>: Dates will be in green color when they have been completed before the set limit date. Good job!  For every other case, dates will be displayed in black.\n\nColors have said meanings only when referring to dates, while the color you choose for the tasks titles can mean whatever you want!</string>
+    <string name="volver">Go back</string>
+
+
+    <string name="app_name">ADHDaily Agenda</string>
+
+    <string name="nombre_tarea">Title</string>
+    <string name="descripciontarea">Description</string>
+    <string name="fecha">Date</string>
+    <string name="botonCompletarAgregarTarea">Add</string>
+    <string name="botonActualizarTarea">Update</string>
+
+    <string name="agregar_tarea">Add task</string>
+    <string name="agregar_tarea_libre">Add task</string>
+    <string name="actualizar_tarea">Update task</string>
+    <string name="agregar_tarea_limite">Add goal</string>
+    <string name="agregar_tarea_evento">Add event</string>
+
+    <string name="boton1">Tasks</string>
+    <string name="boton2">Goals</string>
+    <string name="boton3">Events</string>
+    <string name="botonConvertir">Convert task into goal</string>
+    <string name="marcarProxima">Mark as priority</string>
+    <string name="boton4">null</string>
+    <string name="boton5">null</string>
+
+    <string name="lista_vacia">Empty list!</string>
+    <string name="msj_limite_vacio">Goals are to do\'s you want to complete before a specific date, and that you will probably not attempt to complete in a single sitting. They can be a single task, multiple of them or even be the steps of a project.
+        \n\nExample: Read a book.</string>
+    <string name="msj_libre_vacio">Tasks are to do\'s without a determined schedule or that can be completed at various times. You can write down anything you want to remember, and can also convert them into goals later on.
+    \n\nExample: Buy more coffee.</string>
+    <string name="msj_evento_vacio">Events are activities that take place in a specific date and time. Write down everything that\'s not routine.
+    \n\nExample: Appointment with the doctor.</string>
+
+    <string name="elegir_la_fecha">Pick a date</string>
+    <string name="elegir_la_hora">Pick a time</string>
+    <string name="agregar_un_recordatorio">Add a reminder</string>
+    <string name="switchTL">Activate reminder</string>
+
+    <string name="no">No</string>
+    <string name="si">Yes</string>
+
+    <string name="tarea_completada">Task completed? </string>
+    <string name="menuTituloEliminar">Delete all tasks</string>
+    <string name="tareasEliminadas">Tasks deleted</string>
+
+    <string name="eliminarEventosConfirmacion">Are you sure you want to delete every event?</string>
+    <string name="eliminarObjetivosConfirmacion">Are you sure you want to delete every goal?</string>
+    <string name="eliminarTareasConfirmacion">Are you sure you want to delete every task?</string>
+    <string name="objetivoAgregado">Goal added successfully!</string>
+
+    <string name="completarTituloFecha">Please, choose a title and a date</string>
+    <string name="inputCheckEvento">Please, choose a title, date and time</string>
+    <string name="completarCampos">Please, choose a title</string>
+    <string name="tareaAgregada">Task added successfully!</string>
+    <string name="eventoAgregado">Event added successfully!</string>
+    <string name="eventoActualizado">Event updated successfully!</string>
+    <string name="tareaActualizada">Task updated successfully!</string>
+    <string name="objetivoActualizado">Goal updated successfully!</string>
+    <string name="felicitacionTareaCompletada">Congratulations! Task completed\nWhat other task can you complete?</string>
+    <string name="felicitacionObjetivoCompletada">Congratulations! Goal completed\nWhat is your next goal?</string>
+    <string name="felicitacionEventoCompletada">Congratulations! Event completed\nWhen is your next event?</string>
+    <string name="fechaHome">Today\'s date is\ </string>
+    <string name="agregarFechaConvertir">Add a date for the goal</string>
+    <string name="convertir">Convert</string>
+    <string name="tarea_pendiente">Pending task</string>
+
+    <string name="agregar_alarma">Add an alarm</string>
+    <string name="informaci_n">Information</string>
+    <string name="textoContacto">Doubts or suggestions?</string>
+    <string name="botonContacto">Contact the developer</string>
+    <string name="asuntoMail">ADHDaily user</string>
+
+    <string name="recordatorio">Reminder</string>
+    <string name="notiObjetivo">Limit date for one of your goals is coming up.</string>
+    <string name="notiObjetivo2">Limit date for one of your goals is coming up.</string>
+
+    <string name="notiEvento1">You have an event coming up.</string>
+    <string name="notiEvento2">You have an event coming up.</string>
+
+    <string name="notiTareas1">Remember to complete some of your tasks.</string>
+    <string name="notiTareas2">Remember to complete some of your tasks.</string>
+
+    <string name="notiMain1">Remember to check your agenda.</string>
+    <string name="notiMain2">Remember to check your tasks, goals and events.</string>
+
+    <string name="notiMain3">This is the reminder you set up for\u0020</string>
+
+    <string name="serasNoti">You will be notified on\u0020</string>
+    <string name="objRetrasado">Goal expired yesterday</string>
+    <string name="formatoNoti">MM/dd \'at\' kk:mm</string>
+    <string name="objRetrasado2">Goal expired by\u0020</string>
+    <string name="dias">\u0020days</string>
+    <string name="dias2">\u0020days remaining</string>
+    <string name="esHoy">¡Today!</string>
+    <string name="ultimoDia">Last day remaining</string>
+    <string name="quedan">There are\u0020</string>
+
+    //colores
+    <string name="colorTV">Color:</string>
+    <string name="rosa">Pink</string>
+    <string name="verde">Green</string>
+    <string name="azul">Blue</string>
+    <string name="violeta">Purple</string>
+    <string name="naranja">Orange</string>
+    <string name="marron">Brown</string>
+    <string name="sinColor">No color</string>
+
+    <string name="formatoDia">M/dd</string>
+    <string name="formatoHora">kk:mm</string>
+    <string name="formatFechaMain">EEEE M/dd</string>
+    <string name="languageTag">en-EN</string>
+    <string name="msjBienvenida">Welcome to ADHDaily! \nTo begin, select a list from above</string>
+    <string name="tarea">Task\u0020</string>
+    <string name="eliminada">\u0020deleted</string>
+    <string name="eliminar">Delete \'</string>
+    <string name="confirmacionEliminarTarea">Are you sure you want to delete the task\u0020</string>
+
+
+
+    <string-array name="ArrayColor">
+        <item>No Color</item>
+        <item>Orange</item>
+        <item>Pink</item>
+        <item>Blue</item>
+        <item>Purple</item>
+        <item>Brown</item>
+        <item>Green</item>
+    </string-array>
+    <string name="localeInfo">Language: English (Can)</string>
+    <string name="ActualizarEvento">Update event</string>
+    <string name="actualizarObjetivo">Update goal</string>
+
+
+</resources>

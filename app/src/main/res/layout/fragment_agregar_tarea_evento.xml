@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayoutEvento"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tvTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/agregar_tarea_evento"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNombreTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/nombre_tarea"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTareaEvento" />
+
+        <EditText
+            android:id="@+id/etDescripcionTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="25dp"
+            android:autofillHints="descripction"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/descripciontarea"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreTareaEvento" />
+
+
+        <TextView
+            android:id="@+id/etFechaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/elegir_la_fecha"
+            android:textSize="20sp"
+            app:drawableLeftCompat="@drawable/ic_baseline_edit_calendar_24"
+            app:layout_constraintBottom_toBottomOf="@+id/etHoraEvento"
+            app:layout_constraintEnd_toStartOf="@+id/etHoraEvento"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etHoraEvento" />
+
+        <TextView
+            android:id="@+id/etHoraEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/elegir_la_hora"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerColorEvento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etFechaEvento"
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcionTareaEvento" />
+
+
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:text="@string/colorTV"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerColorLimite"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerColorEvento"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinnerColorEvento" />
+
+        <Spinner
+            android:id="@+id/spinnerColorEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tvAgregarAlarmaEvento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvColor"
+            app:layout_constraintTop_toBottomOf="@+id/etHoraEvento" />
+
+        <TextView
+            android:id="@+id/tvAgregarAlarmaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:drawableLeft="@drawable/ic_baseline_add_alarm_24"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/agregar_un_recordatorio"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnTareaEvento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerColorEvento" />
+
+        <Button
+            android:id="@+id/btnTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/botonCompletarAgregarTarea"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcionTareaEvento"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="600dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayoutLimite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tvTareaLimite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="25dp"
+            android:text="@string/agregarFechaConvertir"
+            android:fontFamily="@font/milmedium"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNombreConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/black"
+            android:ems="10"
+            android:hint="@string/nombre_tarea"
+            android:inputType="text"
+            android:fontFamily="@font/millight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTareaLimite" />
+
+        <EditText
+            android:id="@+id/etDescripcionConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/black"
+            android:inputType="text"
+            android:ems="10"
+            android:hint="@string/descripciontarea"
+            android:fontFamily="@font/millight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreConvertir" />
+
+
+        <TextView
+            android:id="@+id/etFechaConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/elegir_la_fecha"
+            android:textSize="20sp"
+            app:drawableLeftCompat="@drawable/ic_baseline_edit_calendar_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcionConvertir" />
+
+
+        <TextView
+            android:id="@+id/tvAgregarAlarmaConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/agregar_un_recordatorio"
+            android:textSize="18sp"
+            android:fontFamily="@font/milmedium"
+            app:layout_constraintBottom_toTopOf="@+id/btnConvertir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etFechaConvertir"
+            android:drawableLeft="@drawable/ic_baseline_add_alarm_24"/>
+
+        <Button
+            android:id="@+id/btnConvertir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/convertir"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcionConvertir" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="600dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

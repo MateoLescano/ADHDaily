@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tvUpdateTareaLibre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/actualizar_tarea"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etUpdateNombreTareaLibre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/nombre_tarea"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUpdateTareaLibre" />
+
+        <EditText
+            android:id="@+id/etUpdateDescripcionTareaLibre"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"
+            android:autofillHints="descripction"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/descripciontarea"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateNombreTareaLibre" />
+
+
+        <Button
+            android:id="@+id/btnUpdateTarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/botonActualizarTarea"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateDescripcionTareaLibre" />
+
+        <Switch
+            android:id="@+id/switchCompletada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:text="@string/tarea_completada"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerActualizarColorLibre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchProximaActualizar"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/tvEstadoSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/switchCompletada"
+            app:layout_constraintStart_toEndOf="@+id/switchCompletada"
+            app:layout_constraintTop_toTopOf="@+id/switchCompletada"
+            tools:text="@string/no" />
+
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:text="@string/colorTV"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpdateTarea"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerActualizarColorLibre"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switchCompletada" />
+
+
+        <Spinner
+            android:id="@+id/spinnerActualizarColorLibre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpdateTarea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvColor"
+            app:layout_constraintTop_toBottomOf="@+id/switchCompletada" />
+
+        <Switch
+            android:id="@+id/switchProximaActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:text="@string/marcarProxima"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/switchCompletada"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateDescripcionTareaLibre"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+            android:id="@+id/btnTareaAObjetivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:text="@string/botonConvertir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnUpdateTarea" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="600dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

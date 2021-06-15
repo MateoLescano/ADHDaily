@@ -1,0 +1,12 @@
+package com.citesoftware.test4.notificaciones.util
+
+object Constants {
+
+    const val ACTION_SET_EXACT_ALARM = "ACTION_SET_EXACT_ALARM"
+    const val ACTION_SET_EXACT_ALARM_EVENT = "ACTION_SET_EXACT_ALARM_EVENT"
+    const val ACTION_SET_EXACT_ALARM_TAREA = "ACTION_SET_EXACT_ALARM_TAREA"
+    const val ACTION_SET_EXACT_ALARM_MAIN = "ACTION_SET_EXACT_ALARM_MAIN"
+
+
+    const val EXTRA_EXACT_ALARM_TIME = "EXTRA_EXACT_ALARM_TIME"
+}

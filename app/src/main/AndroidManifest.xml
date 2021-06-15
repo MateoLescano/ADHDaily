@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="4"
+    android:versionName="1.0.1"
+    package="com.citesoftware.test4">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_final1"
+        android:label="@string/app_name"
+        android:exported="true"
+        android:roundIcon="@mipmap/ic_launcher_final1_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.Test4"
+        >
+
+
+        <activity android:name="com.citesoftware.test4.main.info_activity" />
+        <activity android:name="com.citesoftware.test4.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.citesoftware.test4.notificaciones.reciver.AlarmReciver" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tvUpdateTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/ActualizarEvento"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etUpdateNombreTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/nombre_tarea"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUpdateTareaEvento" />
+
+        <EditText
+            android:id="@+id/etUpdateDescripcionTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"
+            android:autofillHints="descripction"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/descripciontarea"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateNombreTareaEvento" />
+
+
+        <TextView
+            android:id="@+id/etUpdateFechaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/black"
+            android:drawableLeft="@drawable/ic_baseline_edit_calendar_24"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/elegir_la_fecha"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/etUpdateHoraEvento"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateDescripcionTareaEvento" />
+
+        <TextView
+            android:id="@+id/etUpdateHoraEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/black"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/elegir_la_hora"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etUpdateFechaEvento"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateDescripcionTareaEvento" />
+
+
+        <Switch
+            android:id="@+id/switchCompletadaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:fontFamily="@font/millight"
+            android:text="@string/tarea_completada"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateHoraEvento"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        <TextView
+            android:id="@+id/tvEstadoSwitchEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/switchCompletadaEvento"
+            app:layout_constraintStart_toEndOf="@+id/switchCompletadaEvento"
+            app:layout_constraintTop_toTopOf="@+id/switchCompletadaEvento"
+            tools:text="@string/no" />
+
+
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:text="@string/colorTV"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerActualizarColorEvento"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerActualizarColorEvento"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinnerActualizarColorEvento" />
+
+
+        <Spinner
+            android:id="@+id/spinnerActualizarColorEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpdateTareaEvento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvColor"
+            app:layout_constraintTop_toBottomOf="@+id/switchCompletadaEvento" />
+
+        <Button
+            android:id="@+id/btnUpdateTareaEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/botonActualizarTarea"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateDescripcionTareaEvento"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="600dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

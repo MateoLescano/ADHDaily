@@ -1,0 +1,139 @@
+<resources>
+    //INFO
+    <string name="tituloInfo">Cómo usar ADHDaily</string>
+    <string name="pregunta1"><u>¿A qué lista agrego cada cosa?</u></string>
+    <string name="Respuesta1">La aplicación incluye tres listas distintas:\n\n<b><u>TAREAS</u></b>: La opción más libre, donde puedo incluir cualquier quehacer sin tiempo o fecha. Aconsejamos anotar todas las tareas que no tengan horarios o plazos limites definidos, pero que no quiero olvidar.\n\nTodas las <b>TAREAS</b> se pueden marcar como <i>PROXIMAS</i> cuando quiero que se ponga en la cima en la fila. También se pueden convertir en <b>OBJETIVOS</b> clickeando la tarea y usando el botón <i>CONVERTIR</i>\n\n<b><u>OBJETIVOS</u></b>: Aquí sugerimos colocar uno o varios quehaceres que quiera terminar antes de un día determinado, o marcar las etapas de un proyecto.\n\n<b><u>EVENTOS</u></b>: Los eventos son actividades con una fecha y hora determinada. Recomendamos usarlo para compromisos que no sean parte de la rutina.</string>
+    <string name="pregunta2"><u>¿Qué significan los colores en las fechas?</u></string>
+    <string name="respuesta2">Tanto los <b>OBJETIVOS</b> como los <b>EVENTOS</b> tienen fechas mostradas en pantalla. Estas pueden tomar diferentes colores para facilitar la información.\n\n<b><font fgcolor='#E70000'>ROJO</font></b>: Cuando una fecha está marcada en rojo, significa que la fecha de esa actividad está vencida, es decir que ya pasó. Recomendamos reasignar una fecha clickeando la tarea y modificando la fecha.\n\n<b><font fgcolor='#E7B600'>AMARILLO</font></b>: Quiere decir que la fecha coincide con el día actual, es decir, que la actividad está pautada para el día de hoy.\n\n<b><font fgcolor='#28a745'>VERDE</font></b>: Las fechas aparecen en verde cuando han sido completadas antes de la fecha establecida. ¡Buen trabajo!\n\nPara todos los otros casos, la fecha aparecerá en negro.\n\nNo confundas los colores de las fechas con los colores de los titulos, estos últimos son solo para ayudarte a clasificar tus tareas.</string>
+    <string name="volver">Volver</string>
+
+    <string name="app_name">ADHDaily Agenda</string>
+
+    <string name="nombre_tarea">Título</string>
+    <string name="descripciontarea">Descripción</string>
+    <string name="fecha">Fecha</string>
+    <string name="botonCompletarAgregarTarea">Agregar</string>
+    <string name="botonActualizarTarea">Actualizar</string>
+
+    <string name="agregar_tarea">Agregar tarea</string>
+    <string name="agregar_tarea_libre">Agregar tarea</string>
+    <string name="actualizar_tarea">Actualizar tarea</string>
+    <string name="agregar_tarea_limite">Agregar objetivo</string>
+    <string name="agregar_tarea_evento">Agregar evento</string>
+
+    <string name="boton1">Tareas</string>
+    <string name="boton2">Objetivos</string>
+    <string name="boton3">Eventos</string>
+    <string name="boton4">Tareas seleccionadas</string>
+    <string name="boton5">Ver todas</string>
+
+    <string name="lista_vacia">¡Lista vacía!</string>
+    <string name="msj_limite_vacio">Los objetivos son todo aquello que querés haber terminado antes de una fecha determinada. Estos pueden ser una o varias tareas o incluso las etapas de un proyecto.
+        \n\nEjemplo: Terminar de leer un libro.</string>
+    <string name="msj_libre_vacio">Las tareas son aquellas que no tienen un día en concreto, sino que querés recordar de completar eventualmente.
+    \n\nEjemplo: Comprar café.</string>
+    <string name="msj_evento_vacio">Los eventos son actividades o compromisos que ocurren en un día y horario puntual.
+    \n\nEjemplo: Turno con el médico.</string>
+
+    <string name="elegir_la_fecha">Elegir la fecha</string>
+    <string name="elegir_la_hora">Elegir la hora</string>
+    <string name="agregar_un_recordatorio">Agregar un recordatorio</string>
+    <string name="switchTL">Activar Recordatorio</string>
+
+    <string name="no">No</string>
+    <string name="si">Sí</string>
+
+    <string name="tarea_completada">¿Tarea completada? </string>
+    <string name="menuTituloEliminar">Eliminar todas las tareas</string>
+    <string name="tareasEliminadas">Tareas eliminadas</string>
+
+    <string name="eliminarEventosConfirmacion">¿Estás seguro que querés eliminar todos los eventos?</string>
+    <string name="eliminarObjetivosConfirmacion">¿Estás seguro que querés eliminar todos los objetivos?</string>
+    <string name="eliminarTareasConfirmacion">¿Estás seguro que querés eliminar todas las tareas?</string>
+    <string name="objetivoAgregado">¡Objetivo agregado con éxito!</string>
+
+    <string name="completarTituloFecha">Por favor, completar título y fecha</string>
+    <string name="inputCheckEvento">Por favor, completar el título, fecha y hora</string>
+    <string name="completarCampos">Por favor, completar el título</string>
+    <string name="tareaAgregada">¡Tarea agregada con éxito!</string>
+    <string name="eventoAgregado">¡Evento agregado con éxito!</string>
+    <string name="eventoActualizado">¡Evento actualizado con éxito!</string>
+    <string name="tareaActualizada">¡Tarea actualizada con éxito!</string>
+    <string name="objetivoActualizado">¡Objetivo actualizado con éxito!</string>
+    <string name="felicitacionTareaCompletada">¡Felicitaciones! Tarea completada\n¿Qué otra tarea podés completar?</string>
+    <string name="felicitacionObjetivoCompletada">¡Felicitaciones! Objetivo completado\n¿Cuál es tu siguiente objetivo?</string>
+    <string name="felicitacionEventoCompletada">¡Felicitaciones! Evento completado\n¿Cuál es el próximo evento?</string>
+    <string name="fechaHome">Hoy es\ </string>
+    <string name="agregarFechaConvertir">Agregá una fecha para el objetivo</string>
+    <string name="convertir">Convertir</string>
+    <string name="tarea_pendiente">Tarea Pendiente</string>
+
+    <string name="agregar_alarma">Agregar Alarma</string>
+    <string name="informaci_n">Información</string>
+    <string name="textoContacto">¿Tenés dudas o sugerencias?</string>
+    <string name="botonContacto">Contactar al desarrollador</string>
+    <string name="asuntoMail">Usuario de ADHDaily</string>
+
+    <string name="recordatorio">Recordatorio</string>
+    <string name="notiObjetivo">Se acerca la fecha de uno de tus objetivos.</string>
+    <string name="notiObjetivo2">Se acerca la fecha límite de uno de tus objetivos.</string>
+
+    <string name="notiEvento1">Tenés un evento próximamente.</string>
+    <string name="notiEvento2">Tenés un evento con fecha próximamente.</string>
+
+    <string name="notiTareas1">Recorá cumplir con tus tareas.</string>
+    <string name="notiTareas2">Recorá cumplir las tareas que anotaste.</string>
+
+    <string name="notiMain1">Recorá revisar tus pendientes.</string>
+    <string name="notiMain2">Recorá revisar tus tareas, objetivos y eventos.</string>
+
+    <string name="notiMain3">Este es el recordatorio que activaste para el\u0020</string>
+
+    <string name="serasNoti">Serás notificado el\u0020</string>
+    <string name="objRetrasado">Objetivo retrasado desde ayer</string>
+    <string name="formatoNoti">dd/MM \'a las\' kk:mm</string>
+    <string name="objRetrasado2">Objetivo retrasado hace\u0020</string>
+    <string name="dias">\u0020días</string>
+    <string name="dias2">\u0020días restantes</string>
+    <string name="esHoy">¡Es hoy!</string>
+    <string name="ultimoDia">Último día</string>
+    <string name="quedan">Quedan\u0020</string>
+
+    //colores
+    <string name="colorTV">Color:</string>
+    <string name="rosa">Rosa</string>
+    <string name="verde">Verde</string>
+    <string name="azul">Azul</string>
+    <string name="violeta">Violeta</string>
+    <string name="naranja">Naranja</string>
+    <string name="marron">Marrón</string>
+    <string name="sinColor">Sin Color</string>
+
+    <string name="formatoDia">dd/M</string>
+    <string name="formatoHora">kk:mm</string>
+    <string name="formatFechaMain">EEEE dd/M</string>
+    <string name="languageTag">es-ES</string>
+    <string name="msjBienvenida">¡Bienvenido/a a ADHDaily! \nPara comenzar, seleccioná una lista</string>
+    <string name="tarea">Tarea\u0020</string>
+    <string name="eliminada">\u0020eliminada</string>
+    <string name="eliminar">Eliminar \'</string>
+    <string name="confirmacionEliminarTarea">¿Estás seguro que querés eliminar la tarea\u0020</string>
+
+
+    <string-array name="ArrayColor">
+        <item>Sin Color</item>
+        <item>Naranja</item>
+        <item>Rosa</item>
+        <item>Azul</item>
+        <item>Violeta</item>
+        <item>Marrón</item>
+        <item>Verde</item>
+    </string-array>
+
+    <string name="botonConvertir">Convertir tarea en objetivo</string>
+    <string name="marcarProxima">Marcar como prioritaria</string>
+    <string name="localeInfo">Lenguaje: Español (Uru)</string>
+    <string name="ActualizarEvento">Actualizar evento</string>
+    <string name="actualizarObjetivo">Actualizar objetivo</string>
+
+</resources>

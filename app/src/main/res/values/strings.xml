@@ -138,7 +138,6 @@
     <string name="ActualizarEvento">Update event</string>
     <string name="actualizarObjetivo">Update goal</string>
 
-    <string name="Version" translatable="false">Version: 1.0.1</string>
     <string name="hexVioleta" translatable="false">#b666d2</string>
     <string name="hexVerde" translatable="false">#068019</string>
     <string name="hexRosa" translatable="false">#fc6c85</string>
@@ -147,5 +146,10 @@
     <string name="hexMarron" translatable="false">#a0522d</string>
     <string name="hexAzul" translatable="false">#4682b4</string>
     <string name="mailContacto" translatable="false">mateolescano@gmail.com</string>
+    <string name="agregado">Added on</string>
+    <string name="agregadoHoy">Added today</string>
+    <string name="daysAgo">days ago</string>
+    <string name="agregadoAyer">Added yesterday</string>
+    <string name="version">Version:</string>
 
 </resources>

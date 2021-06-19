@@ -19,6 +19,7 @@ import com.citesoftware.test4.database.viewModel.TareaLibreViewModel
 import com.citesoftware.test4.notificaciones.service.AlarmService
 import kotlinx.android.synthetic.main.fragment_agregar_tarea_libre.*
 import kotlinx.android.synthetic.main.fragment_agregar_tarea_libre.view.*
+import java.text.SimpleDateFormat
 import java.util.*
 
 class FragmentAgregarTarea : Fragment(), AdapterView.OnItemSelectedListener {
@@ -81,17 +82,30 @@ class FragmentAgregarTarea : Fragment(), AdapterView.OnItemSelectedListener {
         color = getString(R.string.sinColor)
     }
 
+    @SuppressLint("SimpleDateFormat")
     private fun insertDataToDatabase() {
 
         val tituloTL = etNombreTareaLibre.text.toString()
         val descripcionTL = etDescripcionTareaLibre.text.toString()
         val proxima = switchProxima.isChecked
 
+        val dateFormat1 = SimpleDateFormat("yyyy")
+        val anioAgregado = dateFormat1.format(Date()).toInt()
+
+        val dateFormat2 = SimpleDateFormat("M")
+        val mesAgregado = dateFormat2.format(Date()).toInt()
+
+        val dateFormat3 = SimpleDateFormat("dd")
+        val diaAgregado = dateFormat3.format(Date()).toInt()
+
+        val dateFormat4 = SimpleDateFormat(getString(R.string.formatoDia))
+        val fechaAgregado = dateFormat4.format(Date())
+
 
         if (inputCheck(tituloTL)) {
 
             // Crear Objeto Tarea
-            val tareaObj = TareaLibre(0, tituloTL, descripcionTL, false,proxima,color)
+            val tareaObj = TareaLibre(0, tituloTL, descripcionTL, false,proxima,color,fechaAgregado,diaAgregado,mesAgregado,anioAgregado)
 
             // Agregar data a la DB
             tareaLibreViewModel.addTareaLibre(tareaObj)

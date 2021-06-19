@@ -27,6 +27,10 @@ class FragmentActualizarTareaLibre : Fragment(), AdapterView.OnItemSelectedListe
 
     var color = " "
     var colorInicial = 0
+    var fecha = " "
+    var dia = 0
+    var mes = 0
+    var anio = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,9 +51,12 @@ class FragmentActualizarTareaLibre : Fragment(), AdapterView.OnItemSelectedListe
         val descri = args.tareaLibreActual.descripcion
         val comple = args.tareaLibreActual.exportar
         val proxima = args.tareaLibreActual.proxima
-        val colorV = args.tareaLibreActual.color
+        fecha = args.tareaLibreActual.fecha
+        dia = args.tareaLibreActual.dia
+        mes = args.tareaLibreActual.mes
+        anio = args.tareaLibreActual.anio
 
-        when (colorV) {
+        when (args.tareaLibreActual.color) {
             getString(R.string.rosa) -> {
                 colorInicial = 2
             }
@@ -73,13 +80,10 @@ class FragmentActualizarTareaLibre : Fragment(), AdapterView.OnItemSelectedListe
             }
         }
 
-
-
         view.etUpdateNombreTareaLibre.setText(args.tareaLibreActual.titulo)
         view.etUpdateDescripcionTareaLibre.setText(args.tareaLibreActual.descripcion)
         view.switchCompletada.isChecked = args.tareaLibreActual.exportar
         view.switchProximaActualizar.isChecked = args.tareaLibreActual.proxima
-
 
         if(args.tareaLibreActual.exportar){
             view.tvEstadoSwitch.text = getString(R.string.si)
@@ -99,7 +103,7 @@ class FragmentActualizarTareaLibre : Fragment(), AdapterView.OnItemSelectedListe
         }
 
         view.btnTareaAObjetivo.setOnClickListener {
-            val tareaLibreVieja: TareaLibre = TareaLibre(id, titulo, descri, comple, proxima, colorV)
+            val tareaLibreVieja = TareaLibre(id, titulo, descri, comple, proxima, color, fecha, dia, mes, anio)
             val action = FragmentActualizarTareaLibreDirections.actionFragmentActualizarTareaLibreToFragmentTareaAObjetivo(tareaLibreVieja)
             findNavController().navigate(
                 action
@@ -148,9 +152,10 @@ class FragmentActualizarTareaLibre : Fragment(), AdapterView.OnItemSelectedListe
 
 
 
+
         if(inputCheck(tituloActualizado)){
 
-            val tareaLibreActualizada = TareaLibre(args.tareaLibreActual.id, tituloActualizado, descripcionActualizada, completadaActualizada,siguienteActualizada,color)
+            val tareaLibreActualizada = TareaLibre(args.tareaLibreActual.id, tituloActualizado, descripcionActualizada, completadaActualizada,siguienteActualizada,color,fecha,dia, mes, anio)
 
             tareaLibreViewModel.updateTareaLibre(tareaLibreActualizada)
 

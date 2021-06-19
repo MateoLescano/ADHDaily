@@ -70,8 +70,6 @@ class FragmentTareaLibre : Fragment() {
             }
         })
 
-
-
         //Menu
         setHasOptionsMenu(true)
 
@@ -91,6 +89,9 @@ class FragmentTareaLibre : Fragment() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
 
 
     // MENU ELIMINAR TODOS

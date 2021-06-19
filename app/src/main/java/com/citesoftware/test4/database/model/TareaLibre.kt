@@ -14,5 +14,9 @@ data class TareaLibre (
     val descripcion: String,
     val exportar: Boolean,
     val proxima: Boolean,
-    val color: String
+    val color: String,
+    val fecha: String,
+    val dia: Int,
+    val mes: Int,
+    val anio: Int,
 ): Parcelable

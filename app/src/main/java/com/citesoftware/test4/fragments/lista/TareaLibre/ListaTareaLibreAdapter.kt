@@ -3,6 +3,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Paint
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,9 @@ import com.citesoftware.test4.database.model.TareaLibre
 import android.view.LayoutInflater
 import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.item_tarea_libre.view.*
+import java.text.SimpleDateFormat
+import java.util.*
+import java.util.concurrent.TimeUnit
 
 class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTareaLibreAdapter.MyViewHolder>() {
 
@@ -22,13 +26,37 @@ class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTa
         return MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_tarea_libre, parent, false))
     }
 
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint("ResourceAsColor", "SetTextI18n")
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val itemActual = tareaLibreLista[position]
 
         holder.itemView.tvTituloTareaLibre.text = itemActual.titulo
         holder.itemView.tvDescrpiconTareaLibre.text = itemActual.descripcion
         holder.itemView.cbTareaLibre.isChecked = itemActual.exportar
+
+        val diaTarea = itemActual.dia
+        val mesTarea = itemActual.mes
+        val anioTarea = itemActual.anio
+
+        val date1 = Date(anioTarea-1900,mesTarea-1,diaTarea)
+        val date2 = Date()
+
+        val long: Long = (date2.time - date1.time)
+        val diasAgregado = TimeUnit.MILLISECONDS.toDays(long)
+
+
+
+        when {
+            diasAgregado.toInt() == 0 -> {
+                holder.itemView.tvAgregado.text = context.getString(R.string.agregadoHoy)
+            }
+            diasAgregado.toInt() == 1 -> {
+                holder.itemView.tvAgregado.text = context.getString(R.string.agregadoAyer)
+            }
+            else -> {
+                holder.itemView.tvAgregado.text = context.getString(R.string.agregado)+ "\u0020" + diasAgregado + "\u0020" + context.getString(R.string.daysAgo)
+            }
+        }
 
 
         // Tachar el titulo si la tarea esta completada
@@ -81,11 +109,9 @@ class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTa
             }
         }
 
-
         holder.itemView.layoutFilaTareaLibre.setOnClickListener {
             val accion = FragmentTareaLibreDirections.actionFragmentTareaLibreToFragmentActualizarTareaLibre(itemActual)
             holder.itemView.findNavController().navigate(accion)
-
         }
 
         holder.itemView.cbTareaLibre.setOnClickListener {

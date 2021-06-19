@@ -136,6 +136,11 @@
     <string name="localeInfo">Language: English (Can)</string>
     <string name="ActualizarEvento">Update event</string>
     <string name="actualizarObjetivo">Update goal</string>
+    <string name="agregado">Added</string>
+    <string name="agregadoHoy">Added today</string>
+    <string name="daysAgo">days ago</string>
+    <string name="agregadoAyer">Added yesterday</string>
+    <string name="version">Version:</string>
 
 
 </resources>

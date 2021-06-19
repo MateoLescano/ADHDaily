@@ -11,10 +11,10 @@ android {
 
     defaultConfig {
         applicationId "com.citesoftware.test4"
-        minSdkVersion 26
+        minSdkVersion 21
         targetSdkVersion 30
-        versionCode 4
-        versionName "1.0.1"
+        versionCode 6
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

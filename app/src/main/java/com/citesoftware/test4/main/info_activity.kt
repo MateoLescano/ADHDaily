@@ -35,7 +35,15 @@ class info_activity : AppCompatActivity() {
             intent.setPackage("com.google.android.gm")
 
             startActivity(intent)
-
         }
+
+        val actionbar = supportActionBar
+        actionbar?.setDisplayHomeAsUpEnabled(true)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
 }

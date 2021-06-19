@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.graphics.Paint
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -75,8 +76,11 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
         }else if(!sinCompletar && fechaCompletada.compareTo(fechaHoy) == 0) {
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#E7B600"))
             holder.itemView.tvRestante.text = context.getString(R.string.esHoy)
+
         }else if(!sinCompletar && fechaHoy < fechaCompletada){
 
+
+            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#000000"))
             if(diasRestantes.toInt() == 1){
                 holder.itemView.tvRestante.text = context.getString(R.string.ultimoDia)
             }else{

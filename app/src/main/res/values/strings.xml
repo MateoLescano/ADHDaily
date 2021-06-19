@@ -133,6 +133,7 @@
         <item>Brown</item>
         <item>Green</item>
     </string-array>
+
     <string name="localeInfo">Language: Default (english)</string>
     <string name="ActualizarEvento">Update event</string>
     <string name="actualizarObjetivo">Update goal</string>

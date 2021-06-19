@@ -40,9 +40,6 @@ class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTa
         val mesTarea = itemActual.mes
         val anioTarea = itemActual.anio
 
-
-
-        Log.d("AAA", "$diaTarea, $mesTarea, $anioTarea")
         val date1 = Date(anioTarea-1900,mesTarea-1,diaTarea)
         val date2 = Date()
 
@@ -64,7 +61,7 @@ class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTa
         }
 
         if(diaTarea == 0 && mesTarea == 0 && anioTarea == 0){
-            holder.itemView.tvAgregado.text = "Actualizar la fecha"
+            holder.itemView.tvAgregado.text = " "
         }
 
 

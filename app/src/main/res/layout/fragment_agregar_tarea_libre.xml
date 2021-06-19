@@ -14,13 +14,13 @@
             android:id="@+id/tvTareaLibre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="25dp"
             android:fontFamily="@font/milmedium"
             android:text="@string/agregar_tarea_libre"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/etNombreTareaLibre"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,14 +28,15 @@
             android:id="@+id/etNombreTareaLibre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
             android:backgroundTintMode="add"
             android:ems="10"
             android:fontFamily="@font/millight"
             android:hint="@string/nombre_tarea"
             android:inputType="text"
             android:nextFocusDown="@id/etDescripcionTareaLibre"
+            app:layout_constraintBottom_toTopOf="@+id/etDescripcionTareaLibre"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTareaLibre" />
 
@@ -43,14 +44,15 @@
             android:id="@+id/etDescripcionTareaLibre"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
-            android:layout_margin="25dp"
             android:autofillHints="descripction"
             android:backgroundTintMode="add"
             android:ems="10"
             android:fontFamily="@font/millight"
             android:hint="@string/descripciontarea"
             android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/switchProxima"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombreTareaLibre" />
 
@@ -78,12 +80,12 @@
             android:text="@string/colorTV"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/tvAgregarAlarmaTarea"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerColorLibre"
             app:layout_constraintEnd_toStartOf="@+id/spinnerColorLibre"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switchProxima" />
+            app:layout_constraintTop_toTopOf="@+id/spinnerColorLibre" />
 
 
         <Spinner
@@ -101,7 +103,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
-            android:drawableLeft="@drawable/ic_baseline_add_alarm_24"
             android:fontFamily="@font/milmedium"
             android:text="@string/agregar_un_recordatorio"
             android:textSize="18sp"
@@ -109,7 +110,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerColorLibre" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerColorLibre"
+            app:drawableLeftCompat="@drawable/ic_baseline_add_alarm_24" />
 
 
         <Button
@@ -118,17 +120,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/milmedium"
             android:text="@string/botonCompletarAgregarTarea"
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDescripcionTareaLibre" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="600dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tvAgregarAlarmaTarea" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

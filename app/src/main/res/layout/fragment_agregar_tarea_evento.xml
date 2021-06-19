@@ -14,13 +14,13 @@
             android:id="@+id/tvTareaEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="25dp"
             android:fontFamily="@font/milmedium"
             android:text="@string/agregar_tarea_evento"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/etNombreTareaEvento"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,13 +28,14 @@
             android:id="@+id/etNombreTareaEvento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="25dp"
             android:backgroundTintMode="add"
             android:ems="10"
             android:fontFamily="@font/millight"
             android:hint="@string/nombre_tarea"
             android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/etDescripcionTareaEvento"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTareaEvento" />
 
@@ -42,14 +43,15 @@
             android:id="@+id/etDescripcionTareaEvento"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_margin="25dp"
             android:autofillHints="descripction"
             android:backgroundTintMode="add"
             android:ems="10"
             android:fontFamily="@font/millight"
             android:hint="@string/descripciontarea"
             android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/etHoraEvento"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etNombreTareaEvento" />
 
@@ -74,7 +76,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/black"
-            android:drawableLeft="@drawable/ic_baseline_access_time_24"
             android:fontFamily="@font/milmedium"
             android:text="@string/elegir_la_hora"
             android:textSize="20sp"
@@ -82,7 +83,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/etFechaEvento"
-            app:layout_constraintTop_toBottomOf="@+id/etDescripcionTareaEvento" />
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcionTareaEvento"
+            app:drawableLeftCompat="@drawable/ic_baseline_access_time_24" />
 
 
         <TextView
@@ -131,18 +133,12 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/milmedium"
             android:text="@string/botonCompletarAgregarTarea"
-            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDescripcionTareaEvento"
-            app:layout_constraintVertical_bias="0.4" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="600dp" />
+            app:layout_constraintTop_toBottomOf="@+id/tvAgregarAlarmaEvento"
+            app:layout_constraintVertical_bias="0.5" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

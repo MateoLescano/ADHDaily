@@ -9,7 +9,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.citesoftware.test4.database.DAOs.TareaLibreDAO
 import com.citesoftware.test4.database.model.TareaLibre
 
-@Database(entities = [TareaLibre::class], version = 2, exportSchema = false)
+@Database(entities = [TareaLibre::class], version = 3, exportSchema = false)
 abstract class TareaLibreDatabase: RoomDatabase() {
 
     abstract fun tareaLibreDAO(): TareaLibreDAO
@@ -21,6 +21,15 @@ abstract class TareaLibreDatabase: RoomDatabase() {
         val migration1to2: Migration = object: Migration(1,2){
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("ALTER TABLE 'tabla_tareaLibre' ADD COLUMN 'color' TEXT NOT NULL DEFAULT 'Sin Color'")
+            }
+        }
+
+        val migration2to3: Migration = object: Migration(2,3){
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.execSQL("ALTER TABLE 'tabla_tareaLibre' ADD COLUMN 'fecha' TEXT NOT NULL DEFAULT 'null'")
+                database.execSQL("ALTER TABLE 'tabla_tareaLibre' ADD COLUMN 'dia' INTEGER NOT NULL DEFAULT 'null'")
+                database.execSQL("ALTER TABLE 'tabla_tareaLibre' ADD COLUMN 'mes' INTEGER NOT NULL DEFAULT 'null'")
+                database.execSQL("ALTER TABLE 'tabla_tareaLibre' ADD COLUMN 'anio' INTEGER NOT NULL DEFAULT 'null'")
             }
         }
 
@@ -36,7 +45,7 @@ abstract class TareaLibreDatabase: RoomDatabase() {
                     context.applicationContext,
                     TareaLibreDatabase::class.java,
                     "tareaLibre_database"
-                ).addMigrations(migration1to2).build()
+                ).addMigrations(migration2to3).build()
                 INSTANCE = instance
                 return instance
             }

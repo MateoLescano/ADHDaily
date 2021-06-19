@@ -34,10 +34,15 @@ class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTa
         holder.itemView.tvDescrpiconTareaLibre.text = itemActual.descripcion
         holder.itemView.cbTareaLibre.isChecked = itemActual.exportar
 
+
+
         val diaTarea = itemActual.dia
         val mesTarea = itemActual.mes
         val anioTarea = itemActual.anio
 
+
+
+        Log.d("AAA", "$diaTarea, $mesTarea, $anioTarea")
         val date1 = Date(anioTarea-1900,mesTarea-1,diaTarea)
         val date2 = Date()
 
@@ -57,6 +62,11 @@ class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTa
                 holder.itemView.tvAgregado.text = context.getString(R.string.agregado)+ "\u0020" + diasAgregado + "\u0020" + context.getString(R.string.daysAgo)
             }
         }
+
+        if(diaTarea == 0 && mesTarea == 0 && anioTarea == 0){
+            holder.itemView.tvAgregado.text = "Actualizar la fecha"
+        }
+
 
 
         // Tachar el titulo si la tarea esta completada

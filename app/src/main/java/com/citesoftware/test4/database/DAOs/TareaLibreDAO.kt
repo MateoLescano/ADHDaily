@@ -12,7 +12,7 @@ interface TareaLibreDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addTareaLibre(tareaLibre: TareaLibre)
 
-    @Query("SELECT * FROM tabla_tareaLibre ORDER BY exportar,~proxima, color, id ASC")
+    @Query("SELECT * FROM tabla_tareaLibre ORDER BY exportar,~proxima, id ASC")
     fun readAllData(): LiveData<MutableList<TareaLibre>>
 
     @Update

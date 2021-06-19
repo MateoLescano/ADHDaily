@@ -47,31 +47,6 @@
             app:layout_constraintStart_toEndOf="@+id/button2"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-<!--        <Button-->
-<!--            android:id="@+id/button4"-->
-<!--            android:layout_width="180dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:layout_marginHorizontal="10dp"-->
-<!--            android:layout_marginTop="9dp"-->
-<!--            android:text="@string/boton4"-->
-<!--            android:textSize="12sp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/button2"-->
-<!--            android:visibility="invisible"/>-->
-
-<!--        <Button-->
-<!--            android:id="@+id/button5"-->
-<!--            android:layout_width="180dp"-->
-<!--            android:layout_height="50dp"-->
-<!--            android:text="@string/boton5"-->
-<!--            android:textSize="12sp"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/myNavHostFragment"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/button4"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/button2"-->
-<!--            android:visibility="invisible"/>-->
-
         <TextView
             android:id="@+id/tvFechaMain"
             android:layout_width="wrap_content"
@@ -85,7 +60,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button2" />
 
-        <fragment
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/myNavHostFragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"

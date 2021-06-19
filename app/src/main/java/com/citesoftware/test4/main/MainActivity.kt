@@ -24,13 +24,6 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    // ADHDaily Agenda
-    // Versión: 1.0.1 (4)
-    // Dia de última modificación: 15/6
-    // Versión de las DBs: 2
-    // Cambios: Fix para notificaciones
-
-
     lateinit var alarmService: AlarmService
 
 

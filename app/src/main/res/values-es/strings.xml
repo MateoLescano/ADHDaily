@@ -91,7 +91,7 @@
 
     <string name="serasNoti">Serás notificado el\u0020</string>
     <string name="objRetrasado">Objetivo retrasado desde ayer</string>
-    <string name="formatoNoti">dd/MM \'a las\' kk:mm</string>
+    <string name="formatoNoti">d/MM \'a las\' k:mm</string>
     <string name="objRetrasado2">Objetivo retrasado hace\u0020</string>
     <string name="dias">\u0020días</string>
     <string name="dias2">\u0020días restantes</string>
@@ -109,9 +109,8 @@
     <string name="marron">Marrón</string>
     <string name="sinColor">Sin Color</string>
 
-    <string name="formatoDia">dd/M</string>
-    <string name="formatoHora">kk:mm</string>
-    <string name="formatFechaMain">EEEE dd/M</string>
+    <string name="formatoDia">d/M</string>
+    <string name="formatFechaMain">EEEE d/M</string>
     <string name="languageTag">es-ES</string>
     <string name="msjBienvenida">¡Bienvenido/a a ADHDaily! \nPara comenzar, seleccioná una lista</string>
     <string name="tarea">Tarea\u0020</string>

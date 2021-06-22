@@ -94,7 +94,7 @@
 
     <string name="serasNoti">You will be notified on\u0020</string>
     <string name="objRetrasado">Goal expired yesterday</string>
-    <string name="formatoNoti">MM/dd \'at\' kk:mm</string>
+    <string name="formatoNoti">MM/d \'at\' k:mm</string>
     <string name="objRetrasado2">Goal expired by\u0020</string>
     <string name="dias">\u0020days</string>
     <string name="dias2">\u0020days remaining</string>
@@ -112,9 +112,8 @@
     <string name="marron">Brown</string>
     <string name="sinColor">No color</string>
 
-    <string name="formatoDia">M/dd</string>
-    <string name="formatoHora">kk:mm</string>
-    <string name="formatFechaMain">EEEE M/dd</string>
+    <string name="formatoDia">M/d</string>
+    <string name="formatFechaMain">EEEE M/d</string>
     <string name="languageTag">en-EN</string>
     <string name="msjBienvenida">Welcome to ADHDaily! \nTo begin, select a list from above</string>
     <string name="tarea">Task\u0020</string>

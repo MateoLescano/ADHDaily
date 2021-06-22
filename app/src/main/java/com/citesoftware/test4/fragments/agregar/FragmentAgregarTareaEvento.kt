@@ -161,7 +161,7 @@ class FragmentAgregarTareaEvento : Fragment(), DatePickerDialog.OnDateSetListene
 
 
         val date = Date(savedAnio, savedMes,savedDia)
-        val dateFormat = SimpleDateFormat(getString(R.string.formatoDia))
+        val dateFormat = SimpleDateFormat(getString(R.string.formatDiaEvento))
         val fecha = dateFormat.format(date)
 
 

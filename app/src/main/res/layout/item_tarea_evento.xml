@@ -63,11 +63,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/milmedium"
+        android:gravity="right"
         android:text="12/2/21"
         android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvTituloTareaEvento"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTituloTareaEvento" />
 
     <TextView
         android:id="@+id/tvHoraTareaEvento"
@@ -79,7 +81,7 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvDescrpiconTareaEvento"
+        app:layout_constraintStart_toStartOf="@+id/tvFechaTareaEvento"
         app:layout_constraintTop_toBottomOf="@+id/tvFechaTareaEvento" />
 
 <!--    <View-->

@@ -193,14 +193,14 @@ class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetList
 
 
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SimpleDateFormat")
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
         savedDia = dayOfMonth
         savedMes = month
         savedAnio = year
 
         val date = Date(savedAnio, savedMes,savedDia)
-        val dateFormat = SimpleDateFormat(getString(R.string.formatoDia))
+        val dateFormat = SimpleDateFormat(getString(R.string.formatDiaEvento))
         val fecha = dateFormat.format(date)
 
 
@@ -210,7 +210,7 @@ class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetList
         etUpdateFechaEvento.text = fecha
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SimpleDateFormat")
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
         savedHora = hourOfDay
         savedMin = minute

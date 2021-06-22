@@ -139,5 +139,6 @@
     <string name="daysAgo">días</string>
     <string name="agregadoAyer">Agregado ayer</string>
     <string name="version">Versión:</string>
+    <string name="formatDiaEvento">EE d/M</string>
 
 </resources>

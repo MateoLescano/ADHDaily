@@ -60,10 +60,8 @@ class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetList
         savedAnio = args.tareaActualEvento.anio
         savedHora = args.tareaActualEvento.horario
 
-        val colorV = args.tareaActualEvento.color
 
-
-        when (colorV) {
+        when (args.tareaActualEvento.color) {
             getString(R.string.rosa) -> {
                 colorInicial = 2
             }
@@ -200,7 +198,7 @@ class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetList
         savedAnio = year
 
         val date = Date(savedAnio, savedMes,savedDia)
-        val dateFormat = SimpleDateFormat(getString(R.string.formatDiaEvento))
+        val dateFormat = SimpleDateFormat(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
         val fecha = dateFormat.format(date)
 
 
@@ -221,7 +219,6 @@ class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetList
 
         etUpdateHoraEvento.text = hora
     }
-
 
 
     // MENU DE ELIMINAR UNA TAREA

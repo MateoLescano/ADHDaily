@@ -164,24 +164,21 @@ class FragmentAgregarTareaEvento : Fragment(), DatePickerDialog.OnDateSetListene
         savedAnio = year
 
 
-        val date = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            LocalDate.of(savedAnio, savedMes+1, savedDia)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) { //Para API 26 en adelante
+            val date = LocalDate.of(savedAnio, savedMes+1, savedDia)
+            val dateFormat = DateTimeFormatter.ofPattern(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
+            val fechaTxt = date.format(dateFormat)
+            etFechaEvento.text = fechaTxt
         } else {
-            TODO("VERSION.SDK_INT < O")
+            val date = Date(savedAnio, savedMes,savedDia)
+            val dateFormat = SimpleDateFormat(getString(R.string.formatoDia))
+            val fechaTxt = dateFormat.format(date)
+            etFechaEvento.text = fechaTxt
         }
-        val dateFormat = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            DateTimeFormatter.ofPattern(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
-        } else {
-            TODO("VERSION.SDK_INT < O")
-        }
-
-        val fechaTxt = date.format(dateFormat)
-
 
         getDateTimeCalendar()
         TimePickerDialog(requireContext(), this, hora,min,true).show()
 
-        etFechaEvento.text = fechaTxt
     }
 
     @SuppressLint("SetTextI18n", "SimpleDateFormat")

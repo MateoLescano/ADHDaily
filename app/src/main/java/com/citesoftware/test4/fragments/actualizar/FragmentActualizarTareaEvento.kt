@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.*
@@ -17,8 +18,11 @@ import com.citesoftware.test4.database.model.TareaEvento
 import com.citesoftware.test4.database.viewModel.TareaEventoViewModel
 import kotlinx.android.synthetic.main.fragment_actualizar_tarea_evento.*
 import kotlinx.android.synthetic.main.fragment_actualizar_tarea_evento.view.*
+import kotlinx.android.synthetic.main.fragment_agregar_tarea_evento.*
 import java.sql.Time
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener, AdapterView.OnItemSelectedListener {
@@ -197,15 +201,21 @@ class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetList
         savedMes = month
         savedAnio = year
 
-        val date = Date(savedAnio, savedMes,savedDia)
-        val dateFormat = SimpleDateFormat(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
-        val fecha = dateFormat.format(date)
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) { //Para API 26 en adelante
+            val date = LocalDate.of(savedAnio, savedMes+1, savedDia)
+            val dateFormat = DateTimeFormatter.ofPattern(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
+            val fechaTxt = date.format(dateFormat)
+            etFechaEvento.text = fechaTxt
+        } else {
+            val date = Date(savedAnio, savedMes,savedDia)
+            val dateFormat = SimpleDateFormat(getString(R.string.formatoDia))
+            val fechaTxt = dateFormat.format(date)
+            etFechaEvento.text = fechaTxt
+        }
 
         getDateTimeCalendar()
         TimePickerDialog(requireContext(), this, hora,min,true).show()
 
-        etUpdateFechaEvento.text = fecha
     }
 
     @SuppressLint("SetTextI18n", "SimpleDateFormat")

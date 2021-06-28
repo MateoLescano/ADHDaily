@@ -205,12 +205,12 @@ class FragmentActualizarTareaEvento : Fragment(), DatePickerDialog.OnDateSetList
             val date = LocalDate.of(savedAnio, savedMes+1, savedDia)
             val dateFormat = DateTimeFormatter.ofPattern(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
             val fechaTxt = date.format(dateFormat)
-            etFechaEvento.text = fechaTxt
+            etUpdateFechaEvento.text = fechaTxt
         } else {
             val date = Date(savedAnio, savedMes,savedDia)
             val dateFormat = SimpleDateFormat(getString(R.string.formatoDia))
             val fechaTxt = dateFormat.format(date)
-            etFechaEvento.text = fechaTxt
+            etUpdateFechaEvento.text = fechaTxt
         }
 
         getDateTimeCalendar()

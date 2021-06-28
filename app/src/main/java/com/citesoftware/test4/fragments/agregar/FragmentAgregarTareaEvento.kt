@@ -3,9 +3,11 @@ package com.citesoftware.test4.fragments.agregar
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
 import android.text.format.DateFormat
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +23,8 @@ import kotlinx.android.synthetic.main.fragment_agregar_tarea_evento.*
 import kotlinx.android.synthetic.main.fragment_agregar_tarea_evento.view.*
 import java.sql.Time
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class FragmentAgregarTareaEvento : Fragment(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener, AdapterView.OnItemSelectedListener {
@@ -160,15 +164,24 @@ class FragmentAgregarTareaEvento : Fragment(), DatePickerDialog.OnDateSetListene
         savedAnio = year
 
 
-        val date = Date(savedAnio, savedMes,savedDia)
-        val dateFormat = SimpleDateFormat(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
-        val fecha = dateFormat.format(date)
+        val date = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            LocalDate.of(savedAnio, savedMes+1, savedDia)
+        } else {
+            TODO("VERSION.SDK_INT < O")
+        }
+        val dateFormat = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            DateTimeFormatter.ofPattern(getString(R.string.formatDiaEvento), Locale.forLanguageTag(getString(R.string.languageTag)))
+        } else {
+            TODO("VERSION.SDK_INT < O")
+        }
+
+        val fechaTxt = date.format(dateFormat)
 
 
         getDateTimeCalendar()
         TimePickerDialog(requireContext(), this, hora,min,true).show()
 
-        etFechaEvento.text = fecha
+        etFechaEvento.text = fechaTxt
     }
 
     @SuppressLint("SetTextI18n", "SimpleDateFormat")

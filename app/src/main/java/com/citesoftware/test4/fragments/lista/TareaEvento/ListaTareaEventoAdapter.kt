@@ -13,6 +13,7 @@ import com.citesoftware.test4.database.model.TareaEvento
 import kotlinx.android.synthetic.main.item_tarea_evento.view.*
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 class ListaTareaEventoAdapter(val context: Context): RecyclerView.Adapter<ListaTareaEventoAdapter.MyViewHolder>() {
 
@@ -49,15 +50,22 @@ class ListaTareaEventoAdapter(val context: Context): RecyclerView.Adapter<ListaT
         val anioTarea = itemActual.anio
 
         val dateFormat = SimpleDateFormat("yyyy/M/dd")
-        val fechaCompletada = dateFormat.format(Date(anioTarea-1900,mesTarea,diaTarea))
-        val fechaHoy = dateFormat.format(Date())
+
+        val date1 = Date(anioTarea-1900,mesTarea,diaTarea)
+        val date2 = Date()
+        val fechaCompletada = dateFormat.format(date1)
+        val fechaHoy = dateFormat.format(date2)
+
+        val long: Long = (date1.time - date2.time)
+        val diasRestantes = TimeUnit.MILLISECONDS.toDays(long) +1
+        val diasRetraso = TimeUnit.MILLISECONDS.toDays(long) *-1
 
 
-        if(!sinCompletar && fechaCompletada < fechaHoy){
+        if(!sinCompletar && diasRetraso > 0){
             holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#E70000"))
-        }else if(!sinCompletar && fechaCompletada.compareTo(fechaHoy) == 0){
+        }else if(!sinCompletar && diasRetraso.toInt() == 0){
             holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#E7B600"))
-        }else if(sinCompletar && fechaCompletada > fechaHoy){
+        }else if(sinCompletar && diasRetraso < 0){
             holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#28a745"))
         }else{
             holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#000000"))

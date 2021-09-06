@@ -141,4 +141,6 @@
     <string name="version">Versión:</string>
     <string name="formatDiaEvento">EE d/M</string>
 
+    <string name="completadoCon">Completado con\u0020</string>
+
 </resources>

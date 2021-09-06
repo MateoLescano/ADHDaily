@@ -132,17 +132,19 @@
         <item>Brown</item>
         <item>Green</item>
     </string-array>
-    <string name="localeInfo">Language: English (non-US)</string>
+
+    <string name="localeInfo">Language: English (UK)</string>
     <string name="ActualizarEvento">Update event</string>
     <string name="actualizarObjetivo">Update goal</string>
-    <string name="agregado">Added</string>
+
+    <string name="agregado">Added on</string>
     <string name="agregadoHoy">Added today</string>
     <string name="daysAgo">days ago</string>
     <string name="agregadoAyer">Added yesterday</string>
     <string name="version">Version:</string>
     <string name="formatDiaEvento">EE d/M</string>
 
-    <string name="completadoCon">Completed with\u0020</string>
 
+    <string name="completadoCon">Completed with\u0020</string>
 
 </resources>

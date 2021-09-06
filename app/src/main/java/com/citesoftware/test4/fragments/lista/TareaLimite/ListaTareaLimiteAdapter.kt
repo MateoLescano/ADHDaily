@@ -57,14 +57,16 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
         val date1 = Date(anioTarea-1900,mesTarea,diaTarea)
         val date2 = Date()
         val fechaCompletada = dateFormat.format(date1)
+
         val fechaHoy = dateFormat.format(date2)
+//        Log.d("AAA", fechaCompletada +" "+ fechaHoy)
 
         val long: Long = (date1.time - date2.time)
         val diasRestantes = TimeUnit.MILLISECONDS.toDays(long) +1
         val diasRetraso = TimeUnit.MILLISECONDS.toDays(long) *-1
 
 
-        if(!sinCompletar && fechaCompletada < fechaHoy){
+        if(!sinCompletar && diasRetraso > 0){
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#E70000"))
 
             if(diasRetraso.toInt() == 1){
@@ -73,11 +75,12 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
                 holder.itemView.tvRestante.text = context.getString(R.string.objRetrasado2) + diasRetraso + context.getString(R.string.dias)
             }
 
-        }else if(!sinCompletar && fechaCompletada.compareTo(fechaHoy) == 0) {
+        }else if(!sinCompletar && diasRetraso.toInt() == 0) {
+
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#E7B600"))
             holder.itemView.tvRestante.text = context.getString(R.string.esHoy)
 
-        }else if(!sinCompletar && fechaHoy < fechaCompletada){
+        }else if(!sinCompletar && diasRetraso < 0){
 
 
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#000000"))
@@ -87,8 +90,13 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
                 holder.itemView.tvRestante.text = context.getString(R.string.quedan) + diasRestantes + context.getString(R.string.dias2)
             }
 
-        }else if(sinCompletar && fechaHoy < fechaCompletada){
+        }else if(sinCompletar && diasRetraso < 0){
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#28a745"))
+            if(diasRestantes.toInt() == 1){
+                holder.itemView.tvRestante.text = context.getString(R.string.ultimoDia)
+            }else{
+                holder.itemView.tvRestante.text = context.getString(R.string.completadoCon) + diasRestantes + context.getString(R.string.dias2)
+            }
 
         }else{
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#000000"))
@@ -100,6 +108,8 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
             holder.itemView.tvRestante.visibility = VISIBLE
         }
 
+        Log.d("AAA", diasRetraso.toString())
+//        Log.d("AAA", diasRestantes.toString())
 
         when (itemActual.color) {
             context.getString(R.string.rosa) -> {

@@ -154,5 +154,8 @@
 
 
     <string name="completadoCon">Completed with\u0020</string>
+    <string name="agregarLater">Add your Come Back Later</string>
+    <string name="agregarCBLater">Add Come Back Later</string>
+    <string name="actualizarLater">Update Come Back Later</string>
 
 </resources>

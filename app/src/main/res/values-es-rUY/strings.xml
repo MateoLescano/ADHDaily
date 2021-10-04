@@ -142,5 +142,8 @@
     <string name="formatDiaEvento">EE d/M</string>
 
     <string name="completadoCon">Completado con\u0020</string>
+    <string name="agregarLater">Agregá tu Ver Más Tarde</string>
+    <string name="agregarCBLater">Agregar Ver Más Tarde</string>
+    <string name="actualizarLater">Actualizar Ver Más Tarde</string>
 
 </resources>

@@ -41,7 +41,7 @@
             android:gravity="center_horizontal"
             android:fontFamily="@font/millight"
             android:textSize="18sp"
-            android:text="Agregá tus cosas rey"
+            android:text="@string/agregarLater"
             app:layout_constraintBottom_toTopOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

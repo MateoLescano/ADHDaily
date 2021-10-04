@@ -152,5 +152,6 @@
     <string name="preguntaLater"><u>What\'s the difference between the Agenda and Come Back Later?</u></string>
     <string name="respuestaLater">The Agenda is set to hold all of your responsabilities and critial things to remember, while Come Back Later list is made for you to write down random thoughts that may pop up during a moment you can\'t get distracted but don\'t want to forget or list\'s of things that are not fundamental to your routine.</string>
     <string name="ultimaPosicion">Last Position</string>
+    <string name="posicion">Position:</string>
 
 </resources>

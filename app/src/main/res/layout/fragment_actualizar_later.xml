@@ -79,6 +79,21 @@
             app:layout_constraintStart_toEndOf="@+id/tvColor"
             app:layout_constraintTop_toBottomOf="@+id/etUpdateDescripcionLater" />
 
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:fontFamily="@font/millight"
+            android:textColor="@color/black"
+            android:text="@string/posicion"
+            app:layout_constraintBottom_toBottomOf="@+id/etPosicion"
+            app:layout_constraintEnd_toStartOf="@+id/etPosicion"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etPosicion" />
+
         <EditText
             android:id="@+id/etPosicion"
             android:layout_width="wrap_content"
@@ -87,7 +102,8 @@
             android:inputType="number"
             app:layout_constraintBottom_toTopOf="@+id/btnUpdateLater"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toBottomOf="@+id/spinnerActualizarColorLater" />
 
         <Button

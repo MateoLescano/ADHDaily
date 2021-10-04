@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:versionCode="12"
-    android:versionName="1.1"
-    package="com.citesoftware.test4">
+    package="com.citesoftware.test4"
+    android:versionCode="13"
+    android:versionName="1.2">
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_final1"
-        android:label="@string/app_name"
         android:exported="true"
+        android:icon="@mipmap/ic_launcher_final1"
+        android:label="ADHDaily"
         android:roundIcon="@mipmap/ic_launcher_final1_round"
         android:supportsRtl="false"
-        android:theme="@style/Theme.Test4"
-        >
-
-
-        <activity android:name="com.citesoftware.test4.main.info_activity" />
-        <activity android:name="com.citesoftware.test4.main.MainActivity">
+        android:theme="@style/Theme.Test4">
+        <activity
+            android:name=".later.DespuesActivity"
+            android:exported="true" />
+        <activity android:name=".main.info_activity" />
+        <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +25,7 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name="com.citesoftware.test4.notificaciones.reciver.AlarmReciver" />
-
+        <receiver android:name=".notificaciones.reciver.AlarmReciver" />
     </application>
 
 </manifest>

@@ -14,9 +14,9 @@ import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
 import android.widget.Toast
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import com.citesoftware.test4.R
+import com.citesoftware.test4.later.DespuesActivity
 import com.citesoftware.test4.notificaciones.service.AlarmService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_agregar_tarea_libre.*
@@ -91,12 +91,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val intent = Intent(this, info_activity::class.java)
+        val intentInfo = Intent(this, info_activity::class.java)
+        val intentDespues = Intent(this, DespuesActivity::class.java)
+
         when(item.itemId){
-            R.id.infoMenu -> startActivity(intent)
+            R.id.infoMenu -> startActivity(intentInfo)
             R.id.alarmMenu -> setAlarm{timeInMillis -> alarmService.setExactAlarmMain(timeInMillis)
                 val cuando = DateFormat.format(getString(R.string.formatoNoti), timeInMillis).toString()
                 Toast.makeText(this, getString(R.string.serasNoti) + cuando,Toast.LENGTH_LONG).show()}
+            R.id.menuDespues -> startActivity(intentDespues)
         }
         return super.onOptionsItemSelected(item)
     }

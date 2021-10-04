@@ -123,7 +123,6 @@
     <string name="confirmacionEliminarTarea">Are you sure you want to delete the task\u0020</string>
 
 
-
     <string-array name="ArrayColor">
         <item>No Color</item>
         <item>Orange</item>

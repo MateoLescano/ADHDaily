@@ -83,12 +83,10 @@ class FragmentAgregarLater : Fragment(), AdapterView.OnItemSelectedListener {
         val descripcionTL = etDescripcionLater.text.toString()
 
 
-
-
         if (inputCheck(tituloTL)) {
 
             // Crear Objeto Tarea
-            val tareaObj = Later(0, tituloTL, descripcionTL, color)
+            val tareaObj = Later(0, tituloTL, descripcionTL, color, 1479)
 
             // Agregar data a la DB
             laterViewModel.addLater(tareaObj)

@@ -11,7 +11,7 @@ interface LaterDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addLater(later: Later)
 
-    @Query("SELECT * FROM tabla_later ORDER BY id ASC")
+    @Query("SELECT * FROM tabla_later ORDER BY posicion, id ASC")
     fun readAllData(): LiveData<MutableList<Later>>
 
     @Update

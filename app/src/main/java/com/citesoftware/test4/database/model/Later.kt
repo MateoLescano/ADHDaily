@@ -13,5 +13,6 @@ data class Later (
     val id: Int,
     val titulo: String,
     val descripcion: String,
-    val color: String
+    val color: String,
+    val posicion: Int
 ): Parcelable

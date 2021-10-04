@@ -29,13 +29,10 @@ class FragmentActualizarLater : Fragment(), AdapterView.OnItemSelectedListener {
     var colorInicial = 0
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-
-
-
+    
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -75,6 +72,12 @@ class FragmentActualizarLater : Fragment(), AdapterView.OnItemSelectedListener {
         view.etUpdateNombreLater.setText(args.laterActual.titulo)
         view.etUpdateDescripcionLater.setText(args.laterActual.descripcion)
 
+        val posicion = args.laterActual.posicion
+        if(posicion == 1479){
+            view.etPosicion.setHint(getString(R.string.ultimaPosicion)).toString()
+        }else{
+            view.etPosicion.setText((posicion).toString())
+        }
 
         view.btnUpdateLater.setOnClickListener {
             actualizarItem()
@@ -117,14 +120,18 @@ class FragmentActualizarLater : Fragment(), AdapterView.OnItemSelectedListener {
     private fun actualizarItem(){
         val tituloActualizado = etUpdateNombreLater.text.toString()
         val descripcionActualizada = etUpdateDescripcionLater.text.toString()
+        val posicionActualizada: Int
 
-
-
+        if(etPosicion.text.isEmpty()){
+            posicionActualizada = 1479
+        }else{
+            posicionActualizada = etPosicion.text.toString().toInt()
+        }
 
 
         if(inputCheck(tituloActualizado)){
 
-            val LaterActualizada = Later(args.laterActual.id, tituloActualizado, descripcionActualizada, color)
+            val LaterActualizada = Later(args.laterActual.id, tituloActualizado, descripcionActualizada, color, posicionActualizada)
 
             laterViewModel.updateLater(LaterActualizada)
 
@@ -140,11 +147,6 @@ class FragmentActualizarLater : Fragment(), AdapterView.OnItemSelectedListener {
     private fun inputCheck(tituloTL: String): Boolean{
         return !(TextUtils.isEmpty(tituloTL))
     }
-
-
-
-
-
 
     // MENU DE ELIMINAR UNA TAREA
 

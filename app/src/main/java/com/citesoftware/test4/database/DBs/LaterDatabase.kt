@@ -32,7 +32,7 @@ abstract class LaterDatabase: RoomDatabase() {
                     context.applicationContext,
                     LaterDatabase::class.java,
                     "later_database"
-                ).build()
+                ).fallbackToDestructiveMigration().build()
                 INSTANCE = instance
                 return instance
             }

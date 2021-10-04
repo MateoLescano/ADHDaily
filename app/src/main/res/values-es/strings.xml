@@ -145,5 +145,7 @@
     <string name="agregarLater">Agrega un Ver Más Tarde</string>
     <string name="agregarCBLater">Agregar Ver Más Tarde</string>
     <string name="actualizarLater">Actualizar Ver Más Tarde</string>
+    <string name="preguntaLater"><u>¿Cuál es la diferencia entre la Agenda y Ver Más Tarde?</u></string>
+    <string name="respuestaLater">La Agenda está diseñada para contener todas tus responabilidades y actividades críticas, mientras que la lista de Ver Más Tarde está pensada para que anotes pensamientos aleatorios que puedan aparecer en un momento donde no te quieras distraer, o listas de información no fundamental para tu rutina.</string>
 
 </resources>

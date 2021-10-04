@@ -9,15 +9,15 @@ class LaterRepository(private val laterDAO: LaterDAO) {
 
     val readAllData: LiveData<MutableList<Later>> = laterDAO.readAllData()
 
-    suspend fun addTareaLibre(later: Later){
+    suspend fun addLater(later: Later){
         laterDAO.addLater(later)
     }
 
-    suspend fun updateTareaLibre(later: Later){
+    suspend fun updateLater(later: Later){
         laterDAO.actualizarLater(later)
     }
 
-    suspend fun deleteTareaLibre(later: Later){
+    suspend fun deleteLater(later: Later){
         laterDAO.eliminarLater(later)
     }
 

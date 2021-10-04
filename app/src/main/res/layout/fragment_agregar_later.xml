@@ -1,75 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvLater"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginStart="8dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/fabAgregarLater"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:listitem="@layout/item_tarea_libre" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabAgregarLater"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:clickable="true"
-            android:focusable="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@android:drawable/ic_input_add"
-            android:contentDescription="ADD" />
-
         <TextView
-            android:id="@+id/tvInstruccionesLater"
+            android:id="@+id/tvLater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:fontFamily="@font/millight"
-            android:textSize="18sp"
-            android:text="@string/msj_libre_vacio"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/rvLater"
-            android:visibility="invisible"/>
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/rvLater"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_assignment_turned_in_24" />
-
-        <TextView
-            android:id="@+id/tvImagenLater"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lista_vacia"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/agregar_tarea_libre"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            android:fontFamily="@font/millight"
+            app:layout_constraintBottom_toTopOf="@+id/etNombreLater"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            android:visibility="invisible"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etNombreLater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/nombre_tarea"
+            android:inputType="text"
+            android:nextFocusDown="@id/etDescripcionTareaLibre"
+            app:layout_constraintBottom_toTopOf="@+id/etDescripcionLater"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLater" />
+
+        <EditText
+            android:id="@+id/etDescripcionLater"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:autofillHints="descripction"
+            android:backgroundTintMode="add"
+            android:ems="10"
+            android:fontFamily="@font/millight"
+            android:hint="@string/descripciontarea"
+            android:inputType="text"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerColorLater"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreLater" />
+
+
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/millight"
+            android:text="@string/colorTV"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerColorLater"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerColorLater"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinnerColorLater" />
+
+
+        <Spinner
+            android:id="@+id/spinnerColorLater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btnLater"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvColor"
+            app:layout_constraintTop_toBottomOf="@+id/etDescripcionLater" />
+
+        <Button
+            android:id="@+id/btnLater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/botonCompletarAgregarTarea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerColorLater" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -47,7 +47,6 @@
             android:ems="10"
             android:fontFamily="@font/millight"
             android:hint="@string/descripciontarea"
-            android:inputType="text"
             app:layout_constraintBottom_toTopOf="@+id/spinnerColorLater"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,14 +73,14 @@
             android:id="@+id/spinnerColorLater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/btnLater"
+            app:layout_constraintBottom_toTopOf="@+id/btnAgregarLater"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tvColor"
             app:layout_constraintTop_toBottomOf="@+id/etDescripcionLater" />
 
         <Button
-            android:id="@+id/btnLater"
+            android:id="@+id/btnAgregarLater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/milmedium"

@@ -127,8 +127,5 @@
             android:id="@+id/action_fragmentTareaAObjetivo_to_fragmentTareaLibre"
             app:destination="@id/fragmentTareaLibre" />
     </fragment>
-    <fragment
-        android:id="@+id/fragmentLater"
-        android:name="com.citesoftware.test4.later.FragmentLater"
-        android:label="FragmentLater" />
+
 </navigation>

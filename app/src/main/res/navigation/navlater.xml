@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navlater"
+    app:startDestination="@id/fragmentLater">
+
+    <fragment
+        android:id="@+id/fragmentLater"
+        android:name="com.citesoftware.test4.later.FragmentLater"
+        android:label="FragmentLater" >
+        <action
+            android:id="@+id/action_fragmentLater_to_fragmentAgregarLater"
+            app:destination="@id/fragmentAgregarLater" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAgregarLater"
+        android:name="com.citesoftware.test4.later.FragmentAgregarLater"
+        android:label="FragmentAgregarLater" >
+        <action
+            android:id="@+id/action_fragmentAgregarLater_to_fragmentLater"
+            app:destination="@id/fragmentLater" />
+    </fragment>
+
+</navigation>

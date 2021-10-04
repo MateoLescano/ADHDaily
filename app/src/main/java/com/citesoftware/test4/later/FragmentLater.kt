@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_later.view.*
 
 class FragmentLater : Fragment() {
 
-    private lateinit var LaterViewModel: LaterViewModel
+    private lateinit var laterViewModel: LaterViewModel
 
 
     override fun onCreateView(
@@ -33,7 +33,7 @@ class FragmentLater : Fragment() {
         val view = inflater.inflate(R.layout.fragment_later, container, false)
 
         view.fabAgregarLater.setOnClickListener {
-            findNavController().navigate(R.id.)
+            findNavController().navigate(R.id.action_fragmentLater_to_fragmentAgregarLater)
         }
 
         //RecyclerView
@@ -50,8 +50,8 @@ class FragmentLater : Fragment() {
 
         //ViewModel
 
-        LaterViewModel = ViewModelProvider(this).get(LaterViewModel::class.java)
-        LaterViewModel.readAllData.observe(viewLifecycleOwner, Observer {later ->
+        laterViewModel = ViewModelProvider(this).get(LaterViewModel::class.java)
+        laterViewModel.readAllData.observe(viewLifecycleOwner, Observer {later ->
             adapter.setData(later)
 
 
@@ -78,7 +78,7 @@ class FragmentLater : Fragment() {
         val swipeToDeleteCallback = object : SwipeToDeleteCallback() {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val pos = viewHolder.adapterPosition
-                LaterViewModel.deleteLater(adapter.getTarea(pos))
+                laterViewModel.deleteLater(adapter.getTarea(pos))
                 adapter.notifyItemRemoved(pos)
             }
         }
@@ -112,7 +112,7 @@ class FragmentLater : Fragment() {
     private fun eliminarTodo() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton(R.string.si){_,_->
-            LaterViewModel.deleteAll()
+            laterViewModel.deleteAll()
             Toast.makeText(requireContext(), getString(R.string.tareasEliminadas), Toast.LENGTH_SHORT).show()
         }
         builder.setNegativeButton(R.string.no){_,_->}

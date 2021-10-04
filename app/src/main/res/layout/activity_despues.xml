@@ -20,8 +20,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navGraph="@navigation/navigation"
-            tools:layout="@layout/fragment_agregar_tarea_limite" />
+            app:navGraph="@navigation/navlater"
+            tools:layout="@layout/fragment_later" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

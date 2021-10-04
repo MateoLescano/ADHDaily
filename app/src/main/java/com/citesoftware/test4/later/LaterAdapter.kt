@@ -11,6 +11,7 @@ import com.citesoftware.test4.R
 import android.view.LayoutInflater
 import androidx.navigation.findNavController
 import com.citesoftware.test4.database.model.Later
+import com.citesoftware.test4.later.FragmentLaterDirections
 import kotlinx.android.synthetic.main.fragment_agregar_later.view.*
 import kotlinx.android.synthetic.main.item_later.view.*
 import java.text.SimpleDateFormat
@@ -62,10 +63,10 @@ class LaterAdapter(val context: Context): RecyclerView.Adapter<LaterAdapter.MyVi
             }
         }
 
-//        holder.itemView.layoutFilaTareaLibre.setOnClickListener {
-//            val accion = FragmentTareaLibreDirections.actionFragmentTareaLibreToFragmentActualizarTareaLibre(itemActual)
-//            holder.itemView.findNavController().navigate(accion)
-//        }
+        holder.itemView.layoutFilaLater.setOnClickListener {
+            val accion = FragmentLaterDirections.actionFragmentLaterToFragmentActualizarLater(itemActual)
+            holder.itemView.findNavController().navigate(accion)
+        }
 
 
 

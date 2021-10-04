@@ -18,13 +18,13 @@
             android:text="Agregar"
             android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/etNombreLater"
+            app:layout_constraintBottom_toTopOf="@+id/etUpdateNombreLater"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/etNombreLater"
+            android:id="@+id/etUpdateNombreLater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTintMode="add"
@@ -33,13 +33,13 @@
             android:hint="@string/nombre_tarea"
             android:inputType="text"
             android:nextFocusDown="@id/etDescripcionTareaLibre"
-            app:layout_constraintBottom_toTopOf="@+id/etDescripcionLater"
+            app:layout_constraintBottom_toTopOf="@+id/etUpdateDescripcionLater"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLater" />
 
         <EditText
-            android:id="@+id/etDescripcionLater"
+            android:id="@+id/etUpdateDescripcionLater"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:autofillHints="descripction"
@@ -47,10 +47,10 @@
             android:ems="10"
             android:fontFamily="@font/millight"
             android:hint="@string/descripciontarea"
-            app:layout_constraintBottom_toTopOf="@+id/spinnerColorLater"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerActualizarColorLater"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etNombreLater" />
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateNombreLater" />
 
 
         <TextView
@@ -61,34 +61,34 @@
             android:text="@string/colorTV"
             android:textColor="@color/black"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/spinnerColorLater"
-            app:layout_constraintEnd_toStartOf="@+id/spinnerColorLater"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerActualizarColorLater"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerActualizarColorLater"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/spinnerColorLater" />
+            app:layout_constraintTop_toTopOf="@+id/spinnerActualizarColorLater" />
 
 
         <Spinner
-            android:id="@+id/spinnerColorLater"
+            android:id="@+id/spinnerActualizarColorLater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/btnAgregarLater"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpdateLater"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/tvColor"
-            app:layout_constraintTop_toBottomOf="@+id/etDescripcionLater" />
+            app:layout_constraintTop_toBottomOf="@+id/etUpdateDescripcionLater" />
 
         <Button
-            android:id="@+id/btnAgregarLater"
+            android:id="@+id/btnUpdateLater"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/milmedium"
-            android:text="@string/botonCompletarAgregarTarea"
+            android:text="@string/botonActualizarTarea"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinnerColorLater" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerActualizarColorLater" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

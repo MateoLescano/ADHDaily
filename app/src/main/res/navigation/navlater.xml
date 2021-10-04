@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_fragmentLater_to_fragmentAgregarLater"
             app:destination="@id/fragmentAgregarLater" />
+        <action
+            android:id="@+id/action_fragmentLater_to_fragmentActualizarLater"
+            app:destination="@id/fragmentActualizarLater" />
     </fragment>
     <fragment
         android:id="@+id/fragmentAgregarLater"
@@ -19,6 +22,17 @@
         <action
             android:id="@+id/action_fragmentAgregarLater_to_fragmentLater"
             app:destination="@id/fragmentLater" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentActualizarLater"
+        android:name="com.citesoftware.test4.fragments.actualizar.FragmentActualizarLater"
+        android:label="FragmentActualizarLater" >
+        <action
+            android:id="@+id/action_fragmentActualizarLater_to_fragmentLater"
+            app:destination="@id/fragmentLater" />
+        <argument
+            android:name="laterActual"
+            app:argType="com.citesoftware.test4.database.model.Later" />
     </fragment>
 
 </navigation>

@@ -10,7 +10,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.citesoftware.test4.database.DAOs.LaterDAO
 import com.citesoftware.test4.database.model.Later
 
-@Database(entities = [Later::class], version = 1, exportSchema = false)
+@Database(entities = [Later::class], version = 2, exportSchema = false)
 abstract class LaterDatabase: RoomDatabase() {
 
     abstract fun LaterDAO(): LaterDAO

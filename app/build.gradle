@@ -13,8 +13,8 @@ android {
         applicationId "com.citesoftware.test4"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 13
-        versionName "1.2"
+        versionCode 14
+        versionName "1.2.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

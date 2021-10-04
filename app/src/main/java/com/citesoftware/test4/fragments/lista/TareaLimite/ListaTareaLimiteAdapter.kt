@@ -58,6 +58,8 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
         val date2 = Date()
         val fechaCompletada = dateFormat.format(date1)
 
+
+
         val fechaHoy = dateFormat.format(date2)
 //        Log.d("AAA", fechaCompletada +" "+ fechaHoy)
 
@@ -65,8 +67,12 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
         val diasRestantes = TimeUnit.MILLISECONDS.toDays(long) +1
         val diasRetraso = TimeUnit.MILLISECONDS.toDays(long) *-1
 
+        val esHoy = date1.compareTo(date2)
+//        Log.d("AAA", esHoy.toString())
 
-        if(!sinCompletar && diasRetraso > 0){
+
+
+            if(!sinCompletar && diasRetraso > 0){
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#E70000"))
 
             if(diasRetraso.toInt() == 1){
@@ -75,12 +81,12 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
                 holder.itemView.tvRestante.text = context.getString(R.string.objRetrasado2) + diasRetraso + context.getString(R.string.dias)
             }
 
-        }else if(!sinCompletar && diasRetraso.toInt() == 0) {
+        }else if(!sinCompletar && esHoy == -1 ) {
 
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#E7B600"))
             holder.itemView.tvRestante.text = context.getString(R.string.esHoy)
 
-        }else if(!sinCompletar && diasRetraso < 0){
+        }else if(!sinCompletar && esHoy == 1 ){
 
 
             holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#000000"))
@@ -108,8 +114,8 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
             holder.itemView.tvRestante.visibility = VISIBLE
         }
 
-        Log.d("AAA", diasRetraso.toString())
-//        Log.d("AAA", diasRestantes.toString())
+//        Log.d("AAA", "DRetraso "+diasRetraso.toString())
+//        Log.d("AAA", "DRestantes "+diasRestantes.toString())
 
         when (itemActual.color) {
             context.getString(R.string.rosa) -> {

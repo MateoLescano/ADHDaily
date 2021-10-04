@@ -60,10 +60,11 @@ class ListaTareaEventoAdapter(val context: Context): RecyclerView.Adapter<ListaT
         val diasRestantes = TimeUnit.MILLISECONDS.toDays(long) +1
         val diasRetraso = TimeUnit.MILLISECONDS.toDays(long) *-1
 
+        val esHoy = date1.compareTo(date2)
 
         if(!sinCompletar && diasRetraso > 0){
             holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#E70000"))
-        }else if(!sinCompletar && diasRetraso.toInt() == 0){
+        }else if(!sinCompletar && esHoy == -1){
             holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#E7B600"))
         }else if(sinCompletar && diasRetraso < 0){
             holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#28a745"))

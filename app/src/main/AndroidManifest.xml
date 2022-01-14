@@ -13,11 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_final1_round"
         android:supportsRtl="false"
         android:theme="@style/Theme.Test4">
+
         <activity
             android:name=".later.DespuesActivity"
             android:exported="true" />
         <activity android:name=".main.info_activity" />
-        <activity android:name=".main.MainActivity">
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

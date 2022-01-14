@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.NavDeepLinkBuilder
 import com.citesoftware.test4.BuildConfig
 import com.citesoftware.test4.R
 import kotlinx.android.synthetic.main.activity_info.*
@@ -15,7 +16,11 @@ class info_activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
 
-        val intent = Intent(this, MainActivity::class.java)
+                val pendingIntent = Intent(this, MainActivity::class.java)
+//        val pendingIntent = NavDeepLinkBuilder(this.applicationContext)
+//            .setGraph(R.navigation.navigation)
+//            .setDestination(R.id.fragmentTareaLibre)
+//            .createPendingIntent()
 
         val vc = BuildConfig.VERSION_CODE
         val versionName = BuildConfig.VERSION_NAME
@@ -23,7 +28,7 @@ class info_activity : AppCompatActivity() {
         tvVersion.text = getString(R.string.version)+" (" + vc + ") " + versionName
 
         buttonInfo.setOnClickListener {
-            startActivity(intent)
+            startActivity(pendingIntent)
         }
 
         buttonContacto.setOnClickListener {

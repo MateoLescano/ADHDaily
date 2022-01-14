@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@drawable/buttonround"
-        android:textColor="@color/naranjaSuave"
+        android:textColor="@color/white"
         android:fontFamily="@font/milmedium"
         android:textSize="16sp"
         android:text="@string/ver_tareas" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/buttonround"
-        android:textColor="@color/naranjaSuave"
+        android:textColor="@color/white"
         android:fontFamily="@font/milmedium"
         android:textSize="16sp"
         android:text="@string/ver_objetivos" />
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/milmedium"
         android:background="@drawable/buttonround"
-        android:textColor="@color/naranjaSuave"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:layout_alignParentBottom="true"
         android:text="@string/ver_eventos" />

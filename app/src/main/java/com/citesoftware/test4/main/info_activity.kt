@@ -16,11 +16,7 @@ class info_activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info)
 
-                val pendingIntent = Intent(this, MainActivity::class.java)
-//        val pendingIntent = NavDeepLinkBuilder(this.applicationContext)
-//            .setGraph(R.navigation.navigation)
-//            .setDestination(R.id.fragmentTareaLibre)
-//            .createPendingIntent()
+        val pendingIntent = Intent(this, MainActivity::class.java)
 
         val vc = BuildConfig.VERSION_CODE
         val versionName = BuildConfig.VERSION_NAME

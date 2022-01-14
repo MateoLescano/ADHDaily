@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.text.format.DateFormat
+import androidx.navigation.NavDeepLinkBuilder
 import com.citesoftware.test4.R
 import com.citesoftware.test4.main.MainActivity
 import com.citesoftware.test4.notificaciones.service.AlarmService
@@ -46,13 +47,15 @@ class AlarmReciver(): BroadcastReceiver() {
     //Objetivos
     private fun buildNotification(context: Context, title: String, message: String){
 
+        val pendingIntent = NavDeepLinkBuilder(context)
+            .setGraph(R.navigation.navigation)
+            .setDestination(R.id.fragmentTareaLimite)
+            .createPendingIntent()
+
         Notify
             .with(context)
             .meta {
-                clickIntent = PendingIntent.getActivity(context,
-                    0,
-                    Intent(context, MainActivity::class.java),
-                    0)
+                clickIntent = pendingIntent
                 clearIntent = PendingIntent.getService(context,
                     0,
                     Intent(context, AlarmService::class.java)
@@ -73,13 +76,15 @@ class AlarmReciver(): BroadcastReceiver() {
     //Eventos
     private fun buildNotificationEvent(context: Context, title: String, message: String){
 
+        val pendingIntent = NavDeepLinkBuilder(context)
+            .setGraph(R.navigation.navigation)
+            .setDestination(R.id.fragmentTareaEvento)
+            .createPendingIntent()
+
         Notify
             .with(context)
             .meta {
-                clickIntent = PendingIntent.getActivity(context,
-                    0,
-                    Intent(context, MainActivity::class.java),
-                    0)
+                clickIntent = pendingIntent
                 clearIntent = PendingIntent.getService(context,
                     0,
                     Intent(context, AlarmService::class.java)
@@ -98,13 +103,15 @@ class AlarmReciver(): BroadcastReceiver() {
     //Tareas
     private fun buildNotificationTarea(context: Context, title: String, message: String){
 
+        val pendingIntent = NavDeepLinkBuilder(context)
+            .setGraph(R.navigation.navigation)
+            .setDestination(R.id.fragmentTareaLibre)
+            .createPendingIntent()
+
         Notify
             .with(context)
             .meta {
-                clickIntent = PendingIntent.getActivity(context,
-                    0,
-                    Intent(context, MainActivity::class.java),
-                    0)
+                clickIntent = pendingIntent
                 clearIntent = PendingIntent.getService(context,
                     0,
                     Intent(context, AlarmService::class.java)
@@ -122,6 +129,7 @@ class AlarmReciver(): BroadcastReceiver() {
 
     //MenuPrincipal
     private fun buildNotificationMain(context: Context, title: String, message: String){
+
 
         Notify
             .with(context)

@@ -13,6 +13,17 @@
         android:roundIcon="@mipmap/ic_launcher_final1_round"
         android:supportsRtl="false"
         android:theme="@style/Theme.Test4">
+        <receiver
+            android:name=".widget.ButtonsWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/buttons_widget_info" />
+        </receiver>
 
         <activity
             android:name=".later.DespuesActivity"

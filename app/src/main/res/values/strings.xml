@@ -161,5 +161,11 @@
     <string name="respuestaLater">The Agenda is set to hold all of your responsabilities and critial things to remember, while Come Back Later list is made for you to write down random thoughts that may pop up during a moment you can\'t get distracted but don\'t want to forget or list\'s of things that are not fundamental to your routine.</string>
     <string name="ultimaPosicion">Last Position</string>
     <string name="posicion">Position:</string>
+    <string name="appwidget_text" translatable="false">EXAMPLE</string>
+    <string name="add_widget" translatable="false">Add widget</string>
+    <string name="app_widget_description" translatable="false">This is an app widget description</string>
+    <string name="ver_tareas">Tasks</string>
+    <string name="ver_objetivos">Goals</string>
+    <string name="ver_eventos">Events</string>
 
 </resources>

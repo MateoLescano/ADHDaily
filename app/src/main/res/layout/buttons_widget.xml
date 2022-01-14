@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp">
+
+
+    <Button
+        android:id="@+id/btnWidgetTareas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/buttonround"
+        android:textColor="@color/naranjaSuave"
+        android:fontFamily="@font/milmedium"
+        android:textSize="16sp"
+        android:text="@string/ver_tareas" />
+
+    <Button
+        android:id="@+id/btnWidgetObj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/buttonround"
+        android:textColor="@color/naranjaSuave"
+        android:fontFamily="@font/milmedium"
+        android:textSize="16sp"
+        android:text="@string/ver_objetivos" />
+
+    <Button
+        android:id="@+id/btnWidgetEventos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/milmedium"
+        android:background="@drawable/buttonround"
+        android:textColor="@color/naranjaSuave"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/ver_eventos" />
+
+</RelativeLayout>

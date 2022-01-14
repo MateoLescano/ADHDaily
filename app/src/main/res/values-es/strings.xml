@@ -149,5 +149,8 @@
     <string name="respuestaLater">La Agenda está diseñada para contener todas tus responabilidades y actividades críticas, mientras que la lista de Ver Más Tarde está pensada para que anotes pensamientos aleatorios que puedan aparecer en un momento donde no te quieras distraer, o listas de información no fundamental para tu rutina.</string>
     <string name="ultimaPosicion">Última Posición</string>
     <string name="posicion">Posición:</string>
+    <string name="ver_tareas">Ver Tareas</string>
+    <string name="ver_objetivos">Ver Objetivos</string>
+    <string name="ver_eventos">Ver Eventos</string>
 
 </resources>

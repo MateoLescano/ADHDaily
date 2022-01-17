@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/milmedium"
             android:text="@string/agregarFechaConvertir"
-            android:textColor="@color/black"
+            android:textColor = "?android:textColorPrimary"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/etNombreConvertir"
             app:layout_constraintEnd_toEndOf="parent"

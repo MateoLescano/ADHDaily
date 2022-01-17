@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/milmedium"
         android:text="Titulo"
-        android:textColor="@color/black"
+        android:textColor = "?android:textColorPrimary"
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -54,11 +54,29 @@ internal fun updateAppWidget(
         .setDestination(R.id.fragmentTareaEvento)
         .createPendingIntent()
 
+    val pendingIntentAddT = NavDeepLinkBuilder(context.applicationContext)
+        .setGraph(R.navigation.navigation)
+        .setDestination(R.id.fragmentAgregarTarea)
+        .createPendingIntent()
+
+    val pendingIntentAddO = NavDeepLinkBuilder(context.applicationContext)
+        .setGraph(R.navigation.navigation)
+        .setDestination(R.id.fragmentAgregarTareaLimite)
+        .createPendingIntent()
+
+    val pendingIntentAddE = NavDeepLinkBuilder(context.applicationContext)
+        .setGraph(R.navigation.navigation)
+        .setDestination(R.id.fragmentAgregarTareaEvento)
+        .createPendingIntent()
+
 
 
     views.setOnClickPendingIntent(R.id.btnWidgetTareas,pendingIntentT)
     views.setOnClickPendingIntent(R.id.btnWidgetObj,pendingIntentO)
     views.setOnClickPendingIntent(R.id.btnWidgetEventos,pendingIntentE)
+    views.setOnClickPendingIntent(R.id.btnWidgetAddTareas,pendingIntentAddT)
+    views.setOnClickPendingIntent(R.id.btnWidgetAddObj,pendingIntentAddO)
+    views.setOnClickPendingIntent(R.id.btnWidgetAddEventos,pendingIntentAddE)
 
     appWidgetManager.updateAppWidget(appWidgetId, views)
 

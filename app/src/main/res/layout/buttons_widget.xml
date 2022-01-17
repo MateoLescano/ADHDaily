@@ -3,41 +3,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="30dp">
+    android:layout_height="match_parent">
 
 
-    <Button
-        android:id="@+id/btnWidgetTareas"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_alignParentTop="true"
-        android:background="@drawable/buttonround"
-        android:textColor="@color/white"
-        android:fontFamily="@font/milmedium"
-        android:textSize="16sp"
-        android:text="@string/ver_tareas" />
+        >
 
-    <Button
-        android:id="@+id/btnWidgetObj"
+        <Button
+            android:id="@+id/btnWidgetTareas"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/buttonround"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/ver_tareas"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/btnWidgetAddTareas"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/buttonround"
+            android:textColor="@color/white"
+            android:fontFamily="@font/milmedium"
+            android:textSize="14sp"
+            android:text="@string/add"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_centerInParent="true"
-        android:background="@drawable/buttonround"
-        android:textColor="@color/white"
-        android:fontFamily="@font/milmedium"
-        android:textSize="16sp"
-        android:text="@string/ver_objetivos" />
+        >
 
-    <Button
-        android:id="@+id/btnWidgetEventos"
+        <Button
+            android:id="@+id/btnWidgetObj"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/buttonround"
+            android:textColor="@color/white"
+            android:fontFamily="@font/milmedium"
+            android:textSize="14sp"
+            android:text="@string/ver_objetivos"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/btnWidgetAddObj"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/buttonround"
+            android:textColor="@color/white"
+            android:fontFamily="@font/milmedium"
+            android:textSize="14sp"
+            android:text="@string/add"
+            style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/milmedium"
-        android:background="@drawable/buttonround"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:text="@string/ver_eventos" />
+        >
+
+        <Button
+            android:id="@+id/btnWidgetEventos"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/buttonround"
+            android:textColor="@color/white"
+            android:fontFamily="@font/milmedium"
+            android:textSize="14sp"
+            android:text="@string/ver_eventos"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/btnWidgetAddEventos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/buttonround"
+            android:fontFamily="@font/milmedium"
+            android:text="@string/add"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+
+    </LinearLayout>
+
+
+
+
 
 </RelativeLayout>

@@ -152,5 +152,6 @@
     <string name="ver_tareas">Ver Tareas</string>
     <string name="ver_objetivos">Ver Objetivos</string>
     <string name="ver_eventos">Ver Eventos</string>
+    <string name="add">AGREGAR</string>
 
 </resources>

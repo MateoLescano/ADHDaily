@@ -2,7 +2,6 @@
     //INFO
     <string name="tituloInfo">How to use ADHDaily</string>
     <string name="pregunta1"><u>What\'s the difference between the three lists?</u></string>
-    <string name="Respuesta1">The app includes three different lists:\n\n<b><u>TASKS</u></b>: This is where you can include any pending to do that has no specific date or time. We recommend writing down any task that could be done at different times in the future, but that must not forget. \n\nEvery <b>TASK</b> can be marked as <i>PRIORITY</i> to push said task to the top of the list. They can also be converted into <b>GOALS</b> by clicking the task and pressing the <i>CONVERT</i> button\n\n<b><u>GOALS</u></b>: We suggest that you use this list to add every to do you need to get done before a specific date, or to keep track of the steps of a project.\n\n<b><u>EVENTS</u></b>: Events are activities with a set date and time. We advice you to use this for activities or occurrences outside of your routine.</string>
     <string name="pregunta2"><u>What do the colours on the dates mean?</u></string>
     <string name="respuesta2"><b>GOALS</b>, as well as <b>EVENTS</b>, include dates on screen. These can be shown in different colours to convey certain information.\n\n<b><font fgcolor="#E70000">RED</font></b>: Dates while be displayed in red when they have expired, meaning the date set has passed. You can reassign it by clicking the item and selecting a new date.\n\n<b><font fgcolor="#E7B600">YELLOW</font></b>: This colour will display when the date set matches the current date, implying that the selected day has come.\n\n<b><font fgcolor="#28a745">GREEN</font></b>: Dates will be in green colour when they have been completed before the set limit date. Good job!  For every other case, dates will be displayed in black.\n\nColours have said meanings only when referring to dates, while the colour you choose for the tasks titles can mean whatever you want!</string>
     <string name="volver">Go back</string>
@@ -156,6 +155,6 @@
     <string name="ver_tareas">Tasks</string>
     <string name="ver_objetivos">Goals</string>
     <string name="ver_eventos">Events</string>
-    <string name="add">ADD</string>
+    <string name="add">Add</string>
 
 </resources>

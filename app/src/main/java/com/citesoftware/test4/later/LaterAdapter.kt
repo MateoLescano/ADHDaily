@@ -1,6 +1,7 @@
 package com.citesoftware.test4.fragments.lista.TareaLibre
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.Log
@@ -14,6 +15,7 @@ import com.citesoftware.test4.database.model.Later
 import com.citesoftware.test4.later.FragmentLaterDirections
 import kotlinx.android.synthetic.main.fragment_agregar_later.view.*
 import kotlinx.android.synthetic.main.item_later.view.*
+import kotlinx.android.synthetic.main.item_tarea_evento.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -58,8 +60,17 @@ class LaterAdapter(val context: Context): RecyclerView.Adapter<LaterAdapter.MyVi
             context.getString(R.string.marron) -> {
                 holder.itemView.tvTituloLater.setTextColor(Color.parseColor(context.getString(R.string.hexMarron)))
             }
+            context.getString(R.string.rojo) -> {
+                holder.itemView.tvTituloLater.setTextColor(Color.parseColor(context.getString(R.string.hexRojo)))
+            }
+            context.getString(R.string.gold) -> {
+                holder.itemView.tvTituloLater.setTextColor(Color.parseColor(context.getString(R.string.hexGold)))
+            }
             else -> {
-                holder.itemView.tvTituloLater.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))
+                when (context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                    Configuration.UI_MODE_NIGHT_YES -> {holder.itemView.tvTituloLater.setTextColor(Color.parseColor(context.getString(R.string.hexBlanco)))}
+                    Configuration.UI_MODE_NIGHT_NO -> {holder.itemView.tvTituloLater.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))}
+                }
             }
         }
 

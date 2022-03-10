@@ -125,25 +125,32 @@
 
     <string-array name="ArrayColor">
         <item>No Color</item>
+        <item>Red</item>
         <item>Orange</item>
         <item>Pink</item>
         <item>Blue</item>
         <item>Purple</item>
         <item>Brown</item>
         <item>Green</item>
+        <item>Gold</item>
     </string-array>
+
+    <string name="hexVioleta" translatable="false">#b666d2</string>
+    <string name="hexRojo" translatable="false">#e94f64</string>
+    <string name="hexGold" translatable="false">#e5c545</string>
+    <string name="hexVerde" translatable="false">#52d273</string>
+    <string name="hexRosa" translatable="false">#fc6c85</string>
+    <string name="hexNegro" translatable="false">#000000</string>
+    <string name="hexNaranja" translatable="false">#e57254</string>
+    <string name="hexMarron" translatable="false">#a0522d</string>
+    <string name="hexAzul" translatable="false">#46bcde</string>
+    <string name="hexBlanco" translatable="false">#FFFFFF</string>
 
     <string name="localeInfo">Language: Default (english)</string>
     <string name="ActualizarEvento">Update event</string>
     <string name="actualizarObjetivo">Update goal</string>
 
-    <string name="hexVioleta" translatable="false">#b666d2</string>
-    <string name="hexVerde" translatable="false">#068019</string>
-    <string name="hexRosa" translatable="false">#fc6c85</string>
-    <string name="hexNegro" translatable="false">#000000</string>
-    <string name="hexNaranja" translatable="false">#ff6700</string>
-    <string name="hexMarron" translatable="false">#a0522d</string>
-    <string name="hexAzul" translatable="false">#4682b4</string>
+
     <string name="mailContacto" translatable="false">mateolescano@gmail.com</string>
     <string name="agregado">Added on</string>
     <string name="agregadoHoy">Added today</string>
@@ -168,5 +175,7 @@
     <string name="ver_objetivos">Goals</string>
     <string name="ver_eventos">Events</string>
     <string name="add">Add</string>
+    <string name="gold">Gold</string>
+    <string name="rojo">Red</string>
 
 </resources>

@@ -110,6 +110,8 @@
     <string name="violeta">Purple</string>
     <string name="naranja">Orange</string>
     <string name="marron">Brown</string>
+    <string name="rojo">Red</string>
+    <string name="gold">Gold</string>
     <string name="sinColor">No color</string>
 
     <string name="formatoDia">d/M</string>
@@ -125,13 +127,16 @@
 
     <string-array name="ArrayColor">
         <item>No Color</item>
+        <item>Red</item>
         <item>Orange</item>
         <item>Pink</item>
         <item>Blue</item>
         <item>Purple</item>
         <item>Brown</item>
         <item>Green</item>
+        <item>Gold</item>
     </string-array>
+
     <string name="localeInfo">Language: English (non-US)</string>
     <string name="ActualizarEvento">Update event</string>
     <string name="actualizarObjetivo">Update goal</string>

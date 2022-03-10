@@ -125,13 +125,16 @@
 
     <string-array name="ArrayColor">
         <item>No Color</item>
+        <item>Red</item>
         <item>Orange</item>
         <item>Pink</item>
         <item>Blue</item>
         <item>Purple</item>
         <item>Brown</item>
         <item>Green</item>
+        <item>Gold</item>
     </string-array>
+
     <string name="localeInfo">Language: English (US)</string>
     <string name="ActualizarEvento">Update event</string>
     <string name="actualizarObjetivo">Update goal</string>
@@ -154,6 +157,8 @@
     <string name="ver_objetivos">Goals</string>
     <string name="ver_eventos">Events</string>
     <string name="add">Add</string>
+    <string name="rojo">Red</string>
+    <string name="gold">Gold</string>
 
 
 </resources>

@@ -1,6 +1,7 @@
 package com.citesoftware.test4.fragments.lista.TareaEvento
 
 import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.Paint
 import android.view.View
@@ -63,13 +64,16 @@ class ListaTareaEventoAdapter(val context: Context): RecyclerView.Adapter<ListaT
         val esHoy = date1.compareTo(date2)
 
         if(!sinCompletar && diasRetraso > 0){
-            holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#E70000"))
+            holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexRojo)))
         }else if(!sinCompletar && esHoy == -1){
-            holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#E7B600"))
+            holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexGold)))
         }else if(sinCompletar && diasRetraso < 0){
-            holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#28a745"))
+            holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexVerde)))
         }else{
-            holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor("#000000"))
+            when (context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                Configuration.UI_MODE_NIGHT_YES -> {holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexBlanco)))}
+                Configuration.UI_MODE_NIGHT_NO -> {holder.itemView.tvFechaTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))}
+            }
         }
 
         when (itemActual.color) {
@@ -91,8 +95,17 @@ class ListaTareaEventoAdapter(val context: Context): RecyclerView.Adapter<ListaT
             context.getString(R.string.marron) -> {
                 holder.itemView.tvTituloTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexMarron)))
             }
+            context.getString(R.string.rojo) -> {
+                holder.itemView.tvTituloTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexRojo)))
+            }
+            context.getString(R.string.gold) -> {
+                holder.itemView.tvTituloTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexGold)))
+            }
             else -> {
-                holder.itemView.tvTituloTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))
+                when (context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                    Configuration.UI_MODE_NIGHT_YES -> {holder.itemView.tvTituloTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexBlanco)))}
+                    Configuration.UI_MODE_NIGHT_NO -> {holder.itemView.tvTituloTareaEvento.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))}
+                }
             }
         }
 

@@ -123,13 +123,15 @@
 
 
     <string-array name="ArrayColor">
-        <item>No Colour</item>
+        <item>No Color</item>
+        <item>Red</item>
         <item>Orange</item>
         <item>Pink</item>
         <item>Blue</item>
         <item>Purple</item>
         <item>Brown</item>
         <item>Green</item>
+        <item>Gold</item>
     </string-array>
 
     <string name="localeInfo">Language: English (UK)</string>
@@ -156,5 +158,7 @@
     <string name="ver_objetivos">Goals</string>
     <string name="ver_eventos">Events</string>
     <string name="add">Add</string>
+    <string name="rojo">Red</string>
+    <string name="gold">Gold</string>
 
 </resources>

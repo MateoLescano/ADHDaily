@@ -121,12 +121,14 @@
 
     <string-array name="ArrayColor">
         <item>Sin Color</item>
+        <item>Rojo</item>
         <item>Naranja</item>
         <item>Rosa</item>
         <item>Azul</item>
         <item>Violeta</item>
         <item>Marrón</item>
         <item>Verde</item>
+        <item>Dorado</item>
     </string-array>
 
     <string name="botonConvertir">Convertir tarea en objetivo</string>
@@ -153,5 +155,7 @@
     <string name="ver_objetivos">Ver Objetivos</string>
     <string name="ver_eventos">Ver Eventos</string>
     <string name="add">Crear</string>
+    <string name="rojo">Rojo</string>
+    <string name="gold">Dorado</string>
 
 </resources>

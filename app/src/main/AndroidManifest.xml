@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.citesoftware.test4"
-    android:versionCode="17"
+    android:versionCode="18"
     android:versionName="1.4">
 
     <application
@@ -27,7 +27,7 @@
 
         <activity
             android:name=".later.DespuesActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity android:name=".main.info_activity" />
         <activity
             android:name=".main.MainActivity"

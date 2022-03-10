@@ -1,6 +1,7 @@
 package com.citesoftware.test4.fragments.lista.TareaLibre
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.Log
@@ -11,6 +12,7 @@ import com.citesoftware.test4.R
 import com.citesoftware.test4.database.model.TareaLibre
 import android.view.LayoutInflater
 import androidx.navigation.findNavController
+import kotlinx.android.synthetic.main.item_tarea_evento.view.*
 import kotlinx.android.synthetic.main.item_tarea_libre.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -111,8 +113,17 @@ class ListaTareaLibreAdapter(val context: Context): RecyclerView.Adapter<ListaTa
             context.getString(R.string.marron) -> {
                 holder.itemView.tvTituloTareaLibre.setTextColor(Color.parseColor(context.getString(R.string.hexMarron)))
             }
+            context.getString(R.string.rojo) -> {
+                holder.itemView.tvTituloTareaLibre.setTextColor(Color.parseColor(context.getString(R.string.hexRojo)))
+            }
+            context.getString(R.string.gold) -> {
+                holder.itemView.tvTituloTareaLibre.setTextColor(Color.parseColor(context.getString(R.string.hexGold)))
+            }
             else -> {
-                holder.itemView.tvTituloTareaLibre.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))
+                when (context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                    Configuration.UI_MODE_NIGHT_YES -> {holder.itemView.tvTituloTareaLibre.setTextColor(Color.parseColor(context.getString(R.string.hexBlanco)))}
+                    Configuration.UI_MODE_NIGHT_NO -> {holder.itemView.tvTituloTareaLibre.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))}
+                }
             }
         }
 

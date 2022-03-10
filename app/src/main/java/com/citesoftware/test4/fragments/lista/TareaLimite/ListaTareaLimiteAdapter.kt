@@ -2,6 +2,7 @@ package com.citesoftware.test4.fragments.lista.TareaLimite
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.res.Configuration
 import android.graphics.Color
 import android.graphics.Paint
 import android.util.Log
@@ -14,6 +15,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.navigation.findNavController
 import com.citesoftware.test4.database.model.TareaLimite
+import kotlinx.android.synthetic.main.item_tarea_evento.view.*
 import kotlinx.android.synthetic.main.item_tarea_limite.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -73,7 +75,7 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
 
 
             if(!sinCompletar && diasRetraso > 0){
-            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#E70000"))
+            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexRojo)))
 
             if(diasRetraso.toInt() == 1){
                 holder.itemView.tvRestante.text = context.getString(R.string.objRetrasado)
@@ -83,13 +85,16 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
 
         }else if(!sinCompletar && esHoy == -1 ) {
 
-            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#E7B600"))
+            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexGold)))
             holder.itemView.tvRestante.text = context.getString(R.string.esHoy)
 
         }else if(!sinCompletar && esHoy == 1 ){
 
 
-            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#000000"))
+            when (context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                Configuration.UI_MODE_NIGHT_YES -> {holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexBlanco)))}
+                Configuration.UI_MODE_NIGHT_NO -> {holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))}
+            }
             if(diasRestantes.toInt() == 1){
                 holder.itemView.tvRestante.text = context.getString(R.string.ultimoDia)
             }else{
@@ -97,7 +102,7 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
             }
 
         }else if(sinCompletar && diasRetraso < 0){
-            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#28a745"))
+            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexVerde)))
             if(diasRestantes.toInt() == 1){
                 holder.itemView.tvRestante.text = context.getString(R.string.ultimoDia)
             }else{
@@ -105,7 +110,10 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
             }
 
         }else{
-            holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor("#000000"))
+            when (context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                Configuration.UI_MODE_NIGHT_YES -> {holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexBlanco)))}
+                Configuration.UI_MODE_NIGHT_NO -> {holder.itemView.tvFechaTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))}
+            }
         }
 
         if(holder.itemView.tvRestante.text.isEmpty()){
@@ -114,8 +122,6 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
             holder.itemView.tvRestante.visibility = VISIBLE
         }
 
-//        Log.d("AAA", "DRetraso "+diasRetraso.toString())
-//        Log.d("AAA", "DRestantes "+diasRestantes.toString())
 
         when (itemActual.color) {
             context.getString(R.string.rosa) -> {
@@ -136,8 +142,17 @@ class ListaTareaLimiteAdapter(val context: Context): RecyclerView.Adapter<ListaT
             context.getString(R.string.marron) -> {
                 holder.itemView.tvTituloTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexMarron)))
             }
+            context.getString(R.string.rojo) -> {
+                holder.itemView.tvTituloTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexRojo)))
+            }
+            context.getString(R.string.gold) -> {
+                holder.itemView.tvTituloTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexGold)))
+            }
             else -> {
-                holder.itemView.tvTituloTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))
+                when (context.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
+                    Configuration.UI_MODE_NIGHT_YES -> {holder.itemView.tvTituloTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexBlanco)))}
+                    Configuration.UI_MODE_NIGHT_NO -> {holder.itemView.tvTituloTareaLimite.setTextColor(Color.parseColor(context.getString(R.string.hexNegro)))}
+                }
             }
         }
 
